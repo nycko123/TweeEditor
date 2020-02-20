@@ -10,3 +10,5 @@ Under GNU General Public License v3.0
   Linhk: Find improvements and improvements
   
   TweeChalice: Writing of main functions and frameworks
+  
+  If you have some problems to let us know, please write your problems in 'Issues'.
