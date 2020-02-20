@@ -3,7 +3,7 @@ A simple text editor made by Qt
 
 # This app is completely free to use
 
-Under GNU Lincense
+Under GNU General Public License v3.0
 
 # This app was produced by TweeChalice and Linhk
 
