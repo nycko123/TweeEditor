@@ -1,0 +1,28 @@
+{
+    "configurations": [{
+        "name": "Win32",
+        "includePath": [
+            "${workspaceFolder}/**",
+            "D:/Qt5.14.1/5.14.1/mingw73_32/include/",
+            "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtCore",
+            "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtWidgets",
+            "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtGui"
+        ],
+        "browse": {
+            "path": [
+                "${workspaceFolder}/**",
+                "D:/Qt5.14.1/5.14.1/mingw73_32/include/",
+                "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtCore",
+                "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtWidgets",
+                "D:/Qt5.14.1/5.14.1/mingw73_32/include/QtGui"
+            ]
+        },
+        "defines": [
+            "_DEBUG",
+            "UNICODE",
+            "_UNICODE"
+        ],
+        "compilerPath": "D:\\Qt5.14.1\\Tools\\mingw730_32\\bin\\gcc.exe"
+    }],
+    "version": 4
+}
