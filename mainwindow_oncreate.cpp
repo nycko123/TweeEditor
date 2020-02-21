@@ -6,6 +6,10 @@
 #include <QLabel>
 #include <QTabWidget>
 #include <QMessageBox>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QTextStream>
+#include <QFile>
 
 #include "mainwindow.h"
 
@@ -13,11 +17,31 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
+    readSettings();
     createActions();
     createMenuBar();
     createContextMenu();
     createStatuBar();
     createTextEdit();
+}
+
+void MainWindow::readSettings()
+{
+//     const QString display_settings("\\settings\\display_settings.json");
+//     QFile settingsFile(display_settings);
+// retry:
+//     if (!settingsFile.open(QIODevice::ReadOnly))
+//     {
+//         int res = QMessageBox::critical(this, tr("Error"),
+//                                         tr("Error opening JSON file!"), QMessageBox::Retry, QMessageBox::Ok);
+//         if (res == QMessageBox::Retry)
+//             goto retry;
+//         return;
+//     }
+//     QJsonDocument display_settings_document(QJsonDocument::fromJson(settingsFile.readAll()));
+//     QJsonObject obj = display_settings_document.object();
+//     QFont globalFont(obj.value("global_font").toString());
+//     this->setFont(globalFont);
 }
 
 void MainWindow::createActions()
@@ -29,7 +53,10 @@ void MainWindow::createActions()
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
     closeTab = new QAction(QIcon(":/ico/closeTab.jpg"), tr("Close"));
     exitApp = new QAction(tr("Exit"));
-    findText=new QAction(tr("Find"));
+
+    font = new QAction(tr("Font"));
+    findText = new QAction(tr("Find"));
+
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
     aboutThisAppAction = new QAction(QIcon(":/ico/TweeEditor.jpg"), tr("About TweeEditor"));
 
@@ -39,6 +66,8 @@ void MainWindow::createActions()
     saveAs->setShortcut(QKeySequence::SaveAs);
     closeTab->setShortcut(tr("Ctrl+W"));
     exitApp->setShortcut(tr("Ctrl+Q"));
+
+    font->setShortcut(tr("Ctrl+S+F"));
     findText->setShortcut(QKeySequence::Find);
 
     newText->setStatusTip(tr("Create a new text"));
@@ -46,6 +75,8 @@ void MainWindow::createActions()
     saveAs->setStatusTip(tr("Save a document as another file"));
     open->setStatusTip(tr("Open a text file"));
     closeTab->setStatusTip(tr("Close current tab"));
+
+    font->setStatusTip(tr("Sets the global text"));
     findText->setStatusTip(tr("Find the text"));
 
     save->setEnabled(false);
@@ -64,7 +95,8 @@ void MainWindow::createActions()
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
-    connect(findText,SIGNAL(triggered()),this,SLOT(findTextDialog()));
+    connect(font,SIGNAL(triggered()),this,SLOT(fontSelect()));
+    connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
     connect(aboutQtAction, SIGNAL(triggered()), this, SLOT(aboutQt()));
     connect(aboutThisAppAction, SIGNAL(triggered()), this, SLOT(aboutThisApp()));
@@ -94,8 +126,10 @@ void MainWindow::createMenuBar()
     file->addAction(exitApp);
 
     // 'edit' menu
-    QMenu* edit=new QMenu(tr("&Edit"));
+    QMenu *edit = new QMenu(tr("&Edit"));
 
+    edit->addAction(font);
+    edit->addSeparator();
     edit->addAction(findText);
 
     // 'help' menu
@@ -147,4 +181,5 @@ void MainWindow::createTextEdit()
     // adds QPlainText to QTabWidget
     setCentralWidget(tabWidget);
     connect(tabWidget, SIGNAL(currentChanged(int)), this, SLOT(getCurrentPage()));
+    connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeDocument(int)));
 }

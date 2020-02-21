@@ -13,9 +13,10 @@ struct Document
 {
     QPlainTextEdit *textEdit;
     bool bFirstCreate = true; // creates the document for the first time
+    bool bSave = false;
     QString textPath;
 
-    Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true) : textEdit(widget), textPath(path), bFirstCreate(first) {}
+    Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true, const bool save = false) : textEdit(widget), textPath(path), bFirstCreate(first), bSave(save) {}
 };
 
 class QMenuBar;
@@ -30,6 +31,7 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void readSettings(); // reads JSON settings
     ~MainWindow() = default;
 
 private:
@@ -47,14 +49,18 @@ private slots:
     void openDocument();                                                                                             // opens a text documnet
     void saveDocument();                                                                                             // saves the text document
     void saveAsDocument();                                                                                           // the dialog of 'Save As'
-    void closeDocument();                                                                                            // closes current tab
+    void closeDocument(int index = -1);                                                                              // closes current tab
 
     // 'edit' slots
+    void fontSelect();
     void findTextDialog();
 
     // 'help' slots
     void aboutQt();
     void aboutThisApp();
+
+    // invisible slots
+    //void closeSelectedDocument();
 
 private:
     QMenuBar *mainMenu;
@@ -74,12 +80,13 @@ private:
 
     // 'edit' actions
     QAction *findText;
+    QAction *font;
 
     // 'help' actions
     QAction *aboutQtAction;
     QAction *aboutThisAppAction;
 
-    TweeFindDialog* findDialog;
+    TweeFindDialog *findDialog;
 
     int currentText = 0;
     int totalText = 0; // records the number of QPlainText created

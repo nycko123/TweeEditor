@@ -12,30 +12,34 @@
 
 TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDialog(parent)
 {
+    // sets up
     currentTextEdit = new QPlainTextEdit;
     cancel = new QPushButton(tr("Cancel"));
     ok = new QPushButton(tr("Find"));
     findText = new QLineEdit;
-    findIncaseSensitively = new QRadioButton(tr("&Find word incasesensitively"));
     findWholeWord = new QRadioButton(tr("&Find the whole word"));
+    findForward = new QRadioButton(tr("&Default option"));
     findBackward = new QRadioButton(tr("&Find backward from your cursor position"));
-    findCaseSensitively = new QRadioButton(tr("&Find caseSensitively from your cursor position"));
-    findForward=new QRadioButton(tr("&Find forward from your cursor position"));
+    findIncaseSensitively = new QRadioButton(tr("&Find word incasesensitively"));
+    findCaseSensitively = new QRadioButton(tr("&Find word casesensitively"));
 
-    QGroupBox *findWay = new QGroupBox(tr("The way to find"));
+    // basic find options
+    QGroupBox *findOption = new QGroupBox(tr("Find options"));
+    QHBoxLayout *optionLayout = new QHBoxLayout;
+    optionLayout->addWidget(findWholeWord);
+    optionLayout->addWidget(findForward);
+    optionLayout->addWidget(findBackward);
+    findOption->setLayout(optionLayout);
+
+    // expanded finding options
+    QGroupBox *findWay = new QGroupBox(tr("Expanded finding options"));
     QVBoxLayout *findWayLayout = new QVBoxLayout;
     findWayLayout->addWidget(findIncaseSensitively);
-    findWayLayout->addWidget(findWholeWord);
-    findWayLayout->addWidget(findForward);
-    findWayLayout->addWidget(findBackward);
     findWayLayout->addWidget(findCaseSensitively);
     findWay->setLayout(findWayLayout);
 
-    findIncaseSensitively->setChecked(true);
-
-    // that's because find forward is default option
-    findForward->setEnabled(false);
     findForward->setChecked(true);
+    findIncaseSensitively->setChecked(true);
 
     currentTextEdit = textEdit;
 
@@ -48,13 +52,16 @@ TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDia
 
     connect(findIncaseSensitively, SIGNAL(clicked()), this, SLOT(findIncase()));
     connect(findWholeWord, SIGNAL(clicked()), this, SLOT(findWhole()));
+    connect(findForward, SIGNAL(clicked()), this, SLOT(findIncase()));
     connect(findBackward, SIGNAL(clicked()), this, SLOT(findBack()));
     connect(findCaseSensitively, SIGNAL(clicked()), this, SLOT(findCase()));
+
     connect(ok, SIGNAL(clicked()), this, SLOT(findEnteredText()));
     connect(cancel, &QPushButton::clicked, this, &QDialog::close);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(findText);
+    mainLayout->addWidget(findOption);
     mainLayout->addWidget(findWay);
     mainLayout->addLayout(buttonLayout);
     this->setLayout(mainLayout);
@@ -62,11 +69,12 @@ TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDia
     this->setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
     this->setWindowTitle(tr("Find"));
     this->setFixedSize(sizeHint());
+    this->setFont(parent->font());
 }
 
 void TweeFindDialog::findEnteredText()
 {
-    bool res = currentTextEdit->find(findText->text(),findWay);
+    bool res = currentTextEdit->find(findText->text(), findWay);
 
     if (!res)
         QMessageBox::critical(this->window(), tr("Error"),
@@ -79,23 +87,19 @@ void TweeFindDialog::findEnteredText()
 void TweeFindDialog::findIncase()
 {
     findWay = FIND_INCASESENTIVILY;
-    findForward->setChecked(true);
 }
 
 void TweeFindDialog::findWhole()
 {
     findWay = FIND_WHOLEWORD;
-    findForward->setChecked(true);
 }
 
 void TweeFindDialog::findBack()
 {
-    findWay = FIND_BACKWARD;
-    findForward->setChecked(false);
+    findWay = findWay | FIND_BACKWARD;
 }
 
 void TweeFindDialog::findCase()
 {
-    findWay = FIND_CASESENTIVILY;
-    findForward->setChecked(true);
+    findWay = findWay | FIND_CASESENTIVILY;
 }

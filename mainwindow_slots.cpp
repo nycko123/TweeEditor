@@ -8,7 +8,10 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QTextStream>
+#include <QFontDialog>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include "mainwindow.h"
 
@@ -42,9 +45,13 @@ void MainWindow::newDocument(const QString &text, const QString &title, const QS
     document.back().textEdit->setPlainText(text);
     document.back().textPath = textPath;
     if (!textPath.isEmpty())
+    {
         document.back().bFirstCreate = false;
+        document.back().bSave=true;
+    }
 
     tabWidget->addTab(document.back().textEdit, QIcon(":/ico/document.png"), title);
+    tabWidget->setTabsClosable(true);
     tabWidget->update();
     tabWidget->setCurrentWidget(document.back().textEdit);
 
@@ -81,6 +88,20 @@ retry:
 }
 
 // 'edit'
+void MainWindow::fontSelect()
+{
+    bool bSelect;
+    QFont selectedFont=QFontDialog::getFont(&bSelect,this);
+    if(bSelect)
+        this->setFont(selectedFont);
+    // QJsonObject json;
+    // json["global_font"]=selectedFont.toString();
+    // QFile file("//settings//display_settings.json");
+    // file.open(QIODevice::WriteOnly);
+    // file.write(QJsonDocument(json).toJson());
+    // file.close();
+}
+
 void MainWindow::findTextDialog()
 {
     findDialog = new TweeFindDialog(document[currentText].textEdit, this);
@@ -144,16 +165,28 @@ retry:
 
     file.close();
 
+    document[currentText].bSave=true;
+
     qDebug() << "Save file successfully\n";
 }
 
-void MainWindow::closeDocument()
+void MainWindow::closeDocument(int index)
 {
-    totalText--;
-    tabWidget->removeTab(currentText);
+    qDebug()<<index<<"\n";
 
-    // cleans up
-    document.removeAt(currentText + 1);
+    totalText--;
+    // there's no system closeRequest found
+    if(index==-1)
+    {
+        tabWidget->removeTab(currentText);
+        document.removeAt(currentText + 1);
+    }
+    else 
+    {
+        tabWidget->removeTab(index);
+        document.removeAt(index);
+    }
+
     if (totalText == 0)
     {
         save->setEnabled(false);
@@ -192,7 +225,7 @@ retry:
     }
     file.write(text.toUtf8());
 
-    document.remove(currentText);
+    //document.removeAt(currentText+1);
 
     QFileInfo info(file);
     tabWidget->setTabText(currentText, info.fileName());

@@ -10,6 +10,7 @@ class QPushButton;
 class QLineEdit;
 class QPlainTextEdit;
 class QRadioButton;
+class QCheckBox;
 
 class TweeFindDialog : public QDialog
 {
@@ -34,10 +35,11 @@ private:
     QWidget *parent;
 
     // the way to find the word
-    QRadioButton *findIncaseSensitively;
     QRadioButton *findWholeWord;
     QRadioButton *findForward;
     QRadioButton *findBackward;
+
+    QRadioButton *findIncaseSensitively;
     QRadioButton *findCaseSensitively;
     
     QTextDocument::FindFlags findWay=FIND_INCASESENTIVILY;
