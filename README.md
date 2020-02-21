@@ -1,14 +1,11 @@
 # TweeEditor
 A simple text editor made by Qt
 
-# This app is completely free to use
+# Under Mozilla Public License 2.0
 
-Under GNU General Public License v3.0
 
-# This app was produced by TweeChalice and Linhk
-
-  Linhk: Find improvements and improvements
-  
-  TweeChalice: Writing of main functions and frameworks
+# This app was produced by TweeChalice
   
   If you have some problems to let us know, please write your problems in 'Issues'.
+  
+#  If you copy this project and create your own package with it, You MUST use the same license and show the details where the project comes from.
