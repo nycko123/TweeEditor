@@ -10,6 +10,8 @@
 #include <QJsonObject>
 #include <QTextStream>
 #include <QFile>
+#include <QDebug>
+#include <QSettings>
 
 #include "mainwindow.h"
 
@@ -17,31 +19,12 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
-    readSettings();
+    readSettingsFromSystem();
     createActions();
     createMenuBar();
     createContextMenu();
     createStatuBar();
     createTextEdit();
-}
-
-void MainWindow::readSettings()
-{
-//     const QString display_settings("\\settings\\display_settings.json");
-//     QFile settingsFile(display_settings);
-// retry:
-//     if (!settingsFile.open(QIODevice::ReadOnly))
-//     {
-//         int res = QMessageBox::critical(this, tr("Error"),
-//                                         tr("Error opening JSON file!"), QMessageBox::Retry, QMessageBox::Ok);
-//         if (res == QMessageBox::Retry)
-//             goto retry;
-//         return;
-//     }
-//     QJsonDocument display_settings_document(QJsonDocument::fromJson(settingsFile.readAll()));
-//     QJsonObject obj = display_settings_document.object();
-//     QFont globalFont(obj.value("global_font").toString());
-//     this->setFont(globalFont);
 }
 
 void MainWindow::createActions()
@@ -55,7 +38,7 @@ void MainWindow::createActions()
     exitApp = new QAction(tr("Exit"));
 
     font = new QAction(tr("Font"));
-    findText = new QAction(tr("Find"));
+    findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
     aboutThisAppAction = new QAction(QIcon(":/ico/TweeEditor.jpg"), tr("About TweeEditor"));
@@ -95,7 +78,7 @@ void MainWindow::createActions()
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
-    connect(font,SIGNAL(triggered()),this,SLOT(fontSelect()));
+    connect(font, SIGNAL(triggered()), this, SLOT(fontSelect()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
     connect(aboutQtAction, SIGNAL(triggered()), this, SLOT(aboutQt()));
@@ -181,5 +164,43 @@ void MainWindow::createTextEdit()
     // adds QPlainText to QTabWidget
     setCentralWidget(tabWidget);
     connect(tabWidget, SIGNAL(currentChanged(int)), this, SLOT(getCurrentPage()));
-    connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeDocument(int)));
+    connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeSelectedDocument(int)));
+}
+
+void MainWindow::readSettingsFromSystem()
+{
+    QSettings appSettings("TweeLinhk Team", "TweeTextEditor");
+
+    // reads font saved in the system
+    QString fullFont = appSettings.value("textFont", "Microsoft YaHei").toString();
+    QString fontName;
+    int fontName_pos = 0;
+
+    for (auto &i : fullFont)
+    {
+        if (i == ',')
+        {
+            fontName = fullFont.left(fontName_pos);
+            break;
+        }
+        fontName_pos++;
+    }
+
+    textFont = fontName;
+    textFont.setPixelSize(appSettings.value("textFont_PixelSize").toInt());
+    textFont.setPointSize(appSettings.value("textFont_PointSize").toInt());
+
+    qDebug() << "fullFont: " << fullFont << "\n"
+             << "fontName: " << fontName << "\n";
+    qDebug() << "TextFont: " << textFont.toString() << "\n";
+}
+
+void MainWindow::writeSettingsFromSystem()
+{
+    QSettings appSettings("TweeLinhk Team", "TweeTextEditor");
+    appSettings.setValue("textFont", textFont.toString());
+    appSettings.setValue("textFont_PixelSize", textFont.pixelSize());
+    appSettings.setValue("textFont_PointSize", textFont.pointSize());
+
+    qDebug() << "TextFont: " << textFont.toString() << "\n";
 }

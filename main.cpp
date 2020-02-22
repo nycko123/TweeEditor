@@ -5,9 +5,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    //w.readSettings();
-    w.setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
-    w.showMaximized();
+    MainWindow *w = new MainWindow;
+    w->setFont(QFont("Microsoft YaHei"));
+    w->setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
+    w->showMaximized();
     return a.exec();
 }

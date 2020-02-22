@@ -17,12 +17,11 @@ class TweeFindDialog : public QDialog
     Q_OBJECT
 
 private slots:
-    void findEnteredText();         // when button 'ok' clicks
-    void findIncase();              // presses the 'findIn...' radio button
-    void findWhole();           // presses the 'findWord' radio button
-    void findBack();                // presses the 'findBackward' radio button
-    void findCase();                // presses the 'findCase...' radio button
-    
+    void findEnteredText(); // when button 'ok' clicks
+    void findIncase();      // presses the 'findIn...' radio button
+    void findWhole();       // presses the 'findWord' radio button
+    void findBack();        // presses the 'findBackward' radio button
+    void findCase();        // presses the 'findCase...' radio button
 
 public:
     TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent = nullptr);
@@ -41,6 +40,6 @@ private:
 
     QRadioButton *findIncaseSensitively;
     QRadioButton *findCaseSensitively;
-    
-    QTextDocument::FindFlags findWay=FIND_INCASESENTIVILY;
+
+    QTextDocument::FindFlags findWay = FIND_INCASESENTIVILY;
 };

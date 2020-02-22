@@ -11,5 +11,6 @@
         <file>ico/TweeEditor.jpg</file>
         <file>ico/Qt.jpg</file>
         <file>ico/closeTab.jpg</file>
+        <file>ico/find.png</file>
     </qresource>
 </RCC>

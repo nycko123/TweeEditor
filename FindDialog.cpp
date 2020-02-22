@@ -68,8 +68,8 @@ TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDia
 
     this->setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
     this->setWindowTitle(tr("Find"));
-    this->setFixedSize(sizeHint());
     this->setFont(parent->font());
+    this->setFixedSize(sizeHint());
 }
 
 void TweeFindDialog::findEnteredText()

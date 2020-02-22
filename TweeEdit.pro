@@ -18,7 +18,9 @@ SOURCES += \
     main.cpp \
     mainwindow_oncreate.cpp\
     mainwindow_slots.cpp\
-    FindDialog.cpp
+    mainwindow_slots_edit.cpp\
+    FindDialog.cpp\
+    events.cpp
 
 HEADERS += \
     mainwindow.h\

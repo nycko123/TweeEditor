@@ -41,6 +41,9 @@ private:
     void createTextEdit();    // creates the text editor window
     void createContextMenu(); // creates context menu
 
+    void readSettingsFromSystem();  // reads settings from the system
+    void writeSettingsFromSystem(); // writes settings to the system
+
 private slots:
 
     // 'file' slots
@@ -49,7 +52,7 @@ private slots:
     void openDocument();                                                                                             // opens a text documnet
     void saveDocument();                                                                                             // saves the text document
     void saveAsDocument();                                                                                           // the dialog of 'Save As'
-    void closeDocument(int index = -1);                                                                              // closes current tab
+    void closeDocument();                                                                                            // closes current tab
 
     // 'edit' slots
     void fontSelect();
@@ -59,8 +62,13 @@ private slots:
     void aboutQt();
     void aboutThisApp();
 
-    // invisible slots
-    //void closeSelectedDocument();
+    // other slots
+    void saveAsSelectedDocument(int index = -1); // only use when close the other tab
+    void saveSelectedDocument(int index = -1);   // only use when close the other tab
+    void closeSelectedDocument(int index = -1);
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
 
 private:
     QMenuBar *mainMenu;
@@ -90,5 +98,8 @@ private:
 
     int currentText = 0;
     int totalText = 0; // records the number of QPlainText created
+
+    // the displaying of the text
+    QFont textFont;
 };
 #endif // MAINWINDOW_H
