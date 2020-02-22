@@ -1,7 +1,7 @@
 # TweeEditor
 A simple text editor made by Qt
 
-![Introduce Image]("introduce.png")
+![Introduce Image](introduce.png)
 
 # Under Mozilla Public License 2.0
 
