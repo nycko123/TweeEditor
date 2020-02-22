@@ -9,7 +9,7 @@ A simple text editor made by Qt
 
 # Team work with Linhk
   
- TweeChalice and Linhk are students and makes this application alone. This application is simple, so we hope that someone can give me some advise on changing better.
+ TweeChalice and Linhk are students and make this application together. This application is simple, so we hope that someone can give me some advise on changing better.
  
 
  If you have some problems to let us know, please write your problems in 'Issues'.
