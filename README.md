@@ -9,7 +9,7 @@ A simple text editor made by Qt
 ###### Its copyright always belongs to TweeChalice.  If you assign privately, you need to agree with me
 
 
-# Team work with Linhk
+# Team work with [Linhk](https://github.com/Linhk1606 "Linhk")
   
  TweeChalice and Linhk are students and make this application together. This application is simple, so we hope that someone can give me some advise on changing better.
  
