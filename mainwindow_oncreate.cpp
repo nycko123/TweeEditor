@@ -35,9 +35,11 @@ void MainWindow::createActions()
     save = new QAction(QIcon(":/ico/save.png"), tr("Save"));
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
     closeTab = new QAction(QIcon(":/ico/closeTab.jpg"), tr("Close"));
-    exitApp = new QAction(tr("Exit"));
+    exitApp = new QAction(QIcon(":/ico/exit.jpg"),tr("Exit"));
 
-    font = new QAction(tr("Font"));
+    addTime=new QAction(QIcon(":/ico/addTime.jpg"),tr("Add time"));
+    addFileName=new QAction(QIcon(":/ico/file.png"),tr("Add file name"));
+    font = new QAction(QIcon(":/ico/font.jpg"),tr("Font"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
@@ -50,7 +52,8 @@ void MainWindow::createActions()
     closeTab->setShortcut(tr("Ctrl+W"));
     exitApp->setShortcut(tr("Ctrl+Q"));
 
-    font->setShortcut(tr("Ctrl+S+F"));
+    addTime->setShortcut(tr("Alt+T"));
+    addFileName->setShortcut(tr("Alt+N"));
     findText->setShortcut(QKeySequence::Find);
 
     newText->setStatusTip(tr("Create a new text"));
@@ -59,12 +62,17 @@ void MainWindow::createActions()
     open->setStatusTip(tr("Open a text file"));
     closeTab->setStatusTip(tr("Close current tab"));
 
+    addTime->setStatusTip(tr("Adds the current time to the current page"));
+    addFileName->setStatusTip(tr("Adds the current file name to the current page"));
     font->setStatusTip(tr("Sets the global text"));
     findText->setStatusTip(tr("Find the text"));
 
     save->setEnabled(false);
     saveAs->setEnabled(false);
     closeTab->setEnabled(false);
+
+    addTime->setEnabled(false);
+    addFileName->setEnabled(false);
     findText->setEnabled(false);
 
     aboutQtAction->setStatusTip(tr("The information about Qt."));
@@ -78,6 +86,8 @@ void MainWindow::createActions()
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
+    connect(addTime,SIGNAL(triggered()),this,SLOT(addTimetoEdit()));
+    connect(addFileName,SIGNAL(triggered()),this,SLOT(addFileNametoEdit()));
     connect(font, SIGNAL(triggered()), this, SLOT(fontSelect()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
@@ -100,19 +110,30 @@ void MainWindow::createMenuBar()
     QMenu *file = new QMenu(tr("&File"));
 
     file->addAction(newText);
+
     file->addSeparator();
+
     file->addAction(open);
     file->addAction(save);
     file->addAction(saveAs);
+
     file->addSeparator();
+
     file->addAction(closeTab);
     file->addAction(exitApp);
 
     // 'edit' menu
     QMenu *edit = new QMenu(tr("&Edit"));
 
-    edit->addAction(font);
+    edit->addAction(addTime);
+    edit->addAction(addFileName);
+
     edit->addSeparator();
+
+    edit->addAction(font);
+
+    edit->addSeparator();
+
     edit->addAction(findText);
 
     // 'help' menu
@@ -124,7 +145,9 @@ void MainWindow::createMenuBar()
     mainMenu = new QMenuBar;
     mainMenu->addMenu(file);
     mainMenu->addMenu(edit);
+
     mainMenu->addSeparator();
+
     mainMenu->addMenu(help);
     this->setMenuBar(mainMenu);
 }
@@ -140,14 +163,12 @@ void MainWindow::createContextMenu()
     this->addAction(open);
     this->addAction(save);
     this->addAction(saveAs);
-
-    this->addAction(seperator);
-
     this->addAction(closeTab);
-    this->addAction(exitApp);
 
     this->addAction(seperator);
 
+    this->addAction(addTime);
+    this->addAction(addFileName);
     this->addAction(findText);
 
     this->setContextMenuPolicy(Qt::ContextMenuPolicy::ActionsContextMenu);

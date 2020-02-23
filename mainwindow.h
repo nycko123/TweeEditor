@@ -55,6 +55,8 @@ private slots:
     void closeDocument();                                                                                            // closes current tab
 
     // 'edit' slots
+    void addTimetoEdit();
+    void addFileNametoEdit();
     void fontSelect();
     void findTextDialog();
 
@@ -62,12 +64,13 @@ private slots:
     void aboutQt();
     void aboutThisApp();
 
-    // other slots
+    // other slots (special_events.cpp)
     void saveAsSelectedDocument(int index = -1); // only use when close the other tab
     void saveSelectedDocument(int index = -1);   // only use when close the other tab
     void closeSelectedDocument(int index = -1);
 
 protected:
+    // special_events
     void closeEvent(QCloseEvent *event) override;
 
 private:
@@ -87,6 +90,8 @@ private:
     QAction *exitApp;
 
     // 'edit' actions
+    QAction *addTime;
+    QAction *addFileName;
     QAction *findText;
     QAction *font;
 

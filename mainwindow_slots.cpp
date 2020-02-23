@@ -10,8 +10,7 @@
 #include <QTextStream>
 #include <QFontDialog>
 #include <QDebug>
-#include <QJsonDocument>
-#include <QJsonObject>
+#include <QTime>
 
 #include "mainwindow.h"
 
@@ -23,6 +22,18 @@ void MainWindow::getCurrentPage()
 }
 
 // 'edit'
+
+void MainWindow::addTimetoEdit()
+{
+    QTime currentTime=QTime::currentTime();
+    document[currentText].textEdit->appendPlainText(currentTime.toString());
+} 
+
+void MainWindow::addFileNametoEdit()
+{
+    document[currentText].textEdit->appendPlainText(tabWidget->tabText(currentText));
+}
+
 void MainWindow::fontSelect()
 {
     bool bSelect;
@@ -55,7 +66,7 @@ void MainWindow::aboutQt()
 
 void MainWindow::aboutThisApp()
 {
-    const QString introduce = "This program is an open-source application.\nMade by TweeChalice.";
+    const QString introduce = "This program is an open-source application.\n\nMade by TweeChalice and Linhk.";
     QMessageBox *messageBox = new QMessageBox;
     messageBox->setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
     messageBox->setIcon(QMessageBox::Icon::Information);

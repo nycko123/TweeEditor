@@ -20,11 +20,14 @@ void MainWindow::newDocument(const QString &text, const QString &title, const QS
     saveAs->setEnabled(true);
     closeTab->setEnabled(true);
 
+    addTime->setEnabled(true);
+    addFileName->setEnabled(true);
     findText->setEnabled(true);
 
     // default: put the new widget to the back of the queue
     if (totalText == MAX_QPLAINTEXT - 1)
     {
+        statuBar->showMessage(tr("Too full to create!"),3000);
         QMessageBox::critical(this, tr("Error!"), tr("Can\'t create any document now because it\'s full."), QMessageBox::Ok);
         return;
     }
@@ -64,6 +67,7 @@ void MainWindow::openDocument()
 retry:
     if (!file.open(QIODevice::ReadOnly))
     {
+        statuBar->showMessage(tr("Open failed!"),3000);
         int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t open this file."), QMessageBox::Retry, QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
@@ -120,7 +124,7 @@ retry:
 
     document[currentText].bSave = true;
 
-    qDebug() << "Save file successfully\n";
+    statuBar->showMessage(tr("Save file successfully"),3000);
 }
 
 void MainWindow::closeDocument()
@@ -147,8 +151,12 @@ void MainWindow::closeDocument()
         saveAs->setEnabled(false);
         closeTab->setEnabled(false);
 
+        addTime->setEnabled(false);
+        addFileName->setEnabled(false);
         findText->setEnabled(false);
     }
+
+    statuBar->showMessage(tr("You have just closed a text document!"),3000);
 }
 
 void MainWindow::saveAsDocument()
@@ -182,7 +190,9 @@ retry:
     QFileInfo info(file);
     tabWidget->setTabText(currentText, info.fileName());
 
+    document[currentText].bSave = true;
+
     file.close();
 
-    qDebug() << "SaveAs successfully\n";
+    statuBar->showMessage(tr("Save file successfully"),3000);
 }

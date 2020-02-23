@@ -12,5 +12,9 @@
         <file>ico/Qt.jpg</file>
         <file>ico/closeTab.jpg</file>
         <file>ico/find.png</file>
+        <file>ico/addTime.jpg</file>
+        <file>ico/file.png</file>
+        <file>ico/exit.jpg</file>
+        <file>ico/font.jpg</file>
     </qresource>
 </RCC>
