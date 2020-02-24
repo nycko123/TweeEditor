@@ -1,5 +1,5 @@
 <center>
-<b style='font-size:45pt;color:#1faaa7'>TweeEditor</b></br><b style='font-size:.9em;color:#1faaa7'>A cross-platform text editor powered by Qt 5</b>
+<h1>TweeEditor</h1></br><b style='font-size:.9em;color:#1faaa7'>A cross-platform text editor powered by Qt 5</b>
 </center>
 
 ![Introduce Image](introduce.png)
