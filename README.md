@@ -1,5 +1,6 @@
-# TweeEditor
-A simple text editor made by Qt
+<center>
+<b style='font-size:45pt;color:#1faaa7'>TweeEditor</b></br><b style='font-size:.9em;color:#1faaa7'>A cross-platform text editor powered by Qt 5</b>
+</center>
 
 ![Introduce Image](introduce.png)
 
