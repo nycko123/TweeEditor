@@ -34,12 +34,13 @@ void MainWindow::createActions()
     open = new QAction(QIcon(":/ico/open.png"), tr("Open"));
     save = new QAction(QIcon(":/ico/save.png"), tr("Save"));
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
+    printPage = new QAction(QIcon(":/ico/printer.jpg"), tr("Print"));
     closeTab = new QAction(QIcon(":/ico/closeTab.jpg"), tr("Close"));
-    exitApp = new QAction(QIcon(":/ico/exit.jpg"),tr("Exit"));
+    exitApp = new QAction(QIcon(":/ico/exit.jpg"), tr("Exit"));
 
-    addTime=new QAction(QIcon(":/ico/addTime.jpg"),tr("Add time"));
-    addFileName=new QAction(QIcon(":/ico/file.png"),tr("Add file name"));
-    font = new QAction(QIcon(":/ico/font.jpg"),tr("Font"));
+    addTime = new QAction(QIcon(":/ico/addTime.jpg"), tr("Add time"));
+    addFileName = new QAction(QIcon(":/ico/file.png"), tr("Add file name"));
+    font = new QAction(QIcon(":/ico/font.jpg"), tr("Font"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
@@ -60,6 +61,7 @@ void MainWindow::createActions()
     save->setStatusTip(tr("Save the current file"));
     saveAs->setStatusTip(tr("Save a document as another file"));
     open->setStatusTip(tr("Open a text file"));
+    printPage->setStatusTip(tr("Print current document"));
     closeTab->setStatusTip(tr("Close current tab"));
 
     addTime->setStatusTip(tr("Adds the current time to the current page"));
@@ -70,6 +72,7 @@ void MainWindow::createActions()
     save->setEnabled(false);
     saveAs->setEnabled(false);
     closeTab->setEnabled(false);
+    printPage->setEnabled(false);
 
     addTime->setEnabled(false);
     addFileName->setEnabled(false);
@@ -83,11 +86,12 @@ void MainWindow::createActions()
     connect(open, SIGNAL(triggered()), this, SLOT(openDocument()));
     connect(save, SIGNAL(triggered()), this, SLOT(saveDocument()));
     connect(saveAs, SIGNAL(triggered()), this, SLOT(saveAsDocument()));
+    connect(printPage, SIGNAL(triggered()), this, SLOT(printCurrentDocument()));
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
-    connect(addTime,SIGNAL(triggered()),this,SLOT(addTimetoEdit()));
-    connect(addFileName,SIGNAL(triggered()),this,SLOT(addFileNametoEdit()));
+    connect(addTime, SIGNAL(triggered()), this, SLOT(addTimetoEdit()));
+    connect(addFileName, SIGNAL(triggered()), this, SLOT(addFileNametoEdit()));
     connect(font, SIGNAL(triggered()), this, SLOT(fontSelect()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
@@ -116,6 +120,7 @@ void MainWindow::createMenuBar()
     file->addAction(open);
     file->addAction(save);
     file->addAction(saveAs);
+    file->addAction(printPage);
 
     file->addSeparator();
 

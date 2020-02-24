@@ -7,6 +7,8 @@
 #include <QTextStream>
 #include <QFileDialog>
 #include <QStatusBar>
+#include <QPrintDialog>
+#include <QPrinter>
 
 #include "mainwindow.h"
 
@@ -40,7 +42,7 @@ retry:
 
     file.close();
 
-    statuBar->showMessage(tr("Save file successfully"),3000);
+    statuBar->showMessage(tr("Save file successfully"), 3000);
 }
 
 void MainWindow::saveSelectedDocument(int index)
@@ -80,7 +82,7 @@ retry:
 
     file.close();
 
-    statuBar->showMessage(tr("Save file successfully"),3000);
+    statuBar->showMessage(tr("Save file successfully"), 3000);
 }
 
 void MainWindow::closeSelectedDocument(int index)
@@ -105,13 +107,31 @@ void MainWindow::closeSelectedDocument(int index)
         save->setEnabled(false);
         saveAs->setEnabled(false);
         closeTab->setEnabled(false);
+        printPage->setEnabled(false);
 
         addTime->setEnabled(false);
         addFileName->setEnabled(false);
         findText->setEnabled(false);
     }
 
-    statuBar->showMessage(tr("You have just closed a text document!"),3000);
+    statuBar->showMessage(tr("You have just closed a text document!"), 3000);
+}
+
+void MainWindow::printCurrentDocument()
+{
+    if (!document[currentText].bSave)
+        saveDocument();
+
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+    QPrintDialog *printDialog = new QPrintDialog(printer, this);
+    printDialog->setWindowTitle("Select a printer");
+    printDialog->setModal(true);
+    printDialog->show();
+
+    printer = printDialog->printer();
+    printer->setOutputFileName(document[currentText].textPath);
+
+    document[currentText].textEdit->document()->print(printer);
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)

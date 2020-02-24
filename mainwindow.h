@@ -68,6 +68,7 @@ private slots:
     void saveAsSelectedDocument(int index = -1); // only use when close the other tab
     void saveSelectedDocument(int index = -1);   // only use when close the other tab
     void closeSelectedDocument(int index = -1);
+    void printCurrentDocument(); // connects to the printer and print current page
 
 protected:
     // special_events
@@ -86,6 +87,7 @@ private:
     QAction *open;
     QAction *save;
     QAction *saveAs;
+    QAction *printPage;
     QAction *closeTab;
     QAction *exitApp;
 

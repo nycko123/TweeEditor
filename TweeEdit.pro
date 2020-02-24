@@ -1,4 +1,4 @@
-QT       += core gui widgets
+QT       += core gui widgets printsupport
 
 
 CONFIG += c++11
@@ -21,11 +21,13 @@ SOURCES += \
     mainwindow_slots.cpp\
     mainwindow_slots_edit.cpp\
     FindDialog.cpp\
-    special_events.cpp
+    special_events.cpp \
+    tweefirstusedialog.cpp
 
 HEADERS += \
     mainwindow.h\
-    FindDialog.h
+    FindDialog.h \
+    tweefirstusedialog.h
 
 RESOURCES += resource.qrc
 

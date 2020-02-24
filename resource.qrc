@@ -16,5 +16,8 @@
         <file>ico/file.png</file>
         <file>ico/exit.jpg</file>
         <file>ico/font.jpg</file>
+        <file>LICENSE</file>
+        <file>README.md</file>
+        <file>ico/printer.jpg</file>
     </qresource>
 </RCC>
