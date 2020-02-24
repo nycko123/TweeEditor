@@ -102,6 +102,7 @@ private:
     TweeFindDialog *findDialog;
 
     int currentText = 0;
+    int countText = 0;
     int totalText = 0; // records the number of QPlainText created
 
     // the displaying of the text

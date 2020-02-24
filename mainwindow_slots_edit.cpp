@@ -32,6 +32,7 @@ void MainWindow::newDocument(const QString &text, const QString &title, const QS
         return;
     }
     totalText++;
+    countText++;
 
     document.push_back(Document());
 
@@ -45,7 +46,7 @@ void MainWindow::newDocument(const QString &text, const QString &title, const QS
     document.back().textEdit->setFont(textFont);
 
     tabWidget->addTab(document.back().textEdit, QIcon(":/ico/document.png"),
-                      (bEmptyPath ? (tr("untitled %1.txt").arg(totalText)) : title));
+                      (bEmptyPath ? (tr("untitled-%1").arg(countText)) : title));
     tabWidget->setTabsClosable(true);
     tabWidget->update();
     tabWidget->setCurrentWidget(document.back().textEdit);
