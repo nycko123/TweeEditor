@@ -6,7 +6,7 @@
 
 
 Chinese translation: _Linhk_
-Origin translation: _TweeChalice
+Origin translation: _TweeChalice_
 
 
 # Under Mozilla Public License 2.0
