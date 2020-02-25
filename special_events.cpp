@@ -125,13 +125,15 @@ void MainWindow::printCurrentDocument()
     QPrinter *printer = new QPrinter(QPrinter::HighResolution);
     QPrintDialog *printDialog = new QPrintDialog(printer, this);
     printDialog->setWindowTitle("Select a printer");
-    printDialog->setModal(true);
-    printDialog->show();
-
-    printer = printDialog->printer();
-    printer->setOutputFileName(document[currentText].textPath);
-
-    document[currentText].textEdit->document()->print(printer);
+    printDialog->addEnabledOption(QAbstractPrintDialog::PrintSelection);
+    if (printDialog->exec())
+    {
+        printer = printDialog->printer();
+        printer->setOutputFileName(document[currentText].textPath);
+        document[currentText].textEdit->document()->print(printer);
+    }
+    delete printer;
+    delete printDialog;
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
