@@ -125,6 +125,7 @@ retry:
     file.close();
 
     document[currentText].bSave = true;
+    document[currentText].bFirstCreate = false;
 
     statuBar->showMessage(tr("Save file successfully"), 3000);
 }
@@ -194,6 +195,7 @@ retry:
     tabWidget->setTabText(currentText, info.fileName());
 
     document[currentText].bSave = true;
+    document[currentText].bFirstCreate = false;
 
     file.close();
 
