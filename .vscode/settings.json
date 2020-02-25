@@ -4,6 +4,7 @@
         "*.pro": "makefile",
         "*.qrc": "xml",
         "*.user": "xml",
+        "*.qss": "css",
         "*.tcc": "cpp",
         "string": "cpp",
         "unordered_map": "cpp",
@@ -12,6 +13,9 @@
         "ratio": "cpp",
         "streambuf": "cpp",
         "qradiobutton": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "qtextedit": "cpp",
+        "qtwidgets": "cpp",
+        "qtabwidget": "cpp"
     }
 }

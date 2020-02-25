@@ -1,14 +1,5 @@
+#include <QtWidgets>
 #include <QAction>
-#include <QToolBar>
-#include <QMenuBar>
-#include <QAction>
-#include <QStatusBar>
-#include <QLabel>
-#include <QTabWidget>
-#include <QMessageBox>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QTextStream>
 #include <QFile>
 #include <QDebug>
 #include <QSettings>
@@ -53,8 +44,8 @@ void MainWindow::createActions()
     closeTab->setShortcut(tr("Ctrl+W"));
     exitApp->setShortcut(tr("Ctrl+Q"));
 
-    addTime->setShortcut(tr("Alt+T"));
-    addFileName->setShortcut(tr("Alt+N"));
+    addTime->setShortcut(tr("F2"));
+    addFileName->setShortcut(tr("Alt+F2"));
     findText->setShortcut(QKeySequence::Find);
 
     newText->setStatusTip(tr("Create a new text"));
@@ -104,6 +95,8 @@ void MainWindow::createStatuBar()
     statuBar = new QStatusBar;
     this->setStatusBar(statuBar);
     QLabel *label = new QLabel(tr("<i>Ready</i>"));
+    label->setIndent(3);
+
     statuBar->addWidget(label);
 }
 

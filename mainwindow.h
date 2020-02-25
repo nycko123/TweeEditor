@@ -11,9 +11,9 @@ constexpr int MAX_QPLAINTEXT = 11;
 // the information and the widget of the text document
 struct Document
 {
-    QPlainTextEdit *textEdit;
+    QPlainTextEdit *textEdit=nullptr;
     bool bFirstCreate = true; // creates the document for the first time
-    QString textPath;
+    QString textPath="";
 
     Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true) : textEdit(widget), textPath(path), bFirstCreate(first) {}
 };
@@ -30,28 +30,37 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    void readSettings(); // reads JSON settings
     ~MainWindow() = default;
 
 private:
-    void createActions();     // creates the basic actions
-    void createMenuBar();     // creates the menu
-    void createStatuBar();    // creates the state bar
-    void createTextEdit();    // creates the text editor window
-    void createContextMenu(); // creates context menu
+    // basic functions
+    void setEnableActions(bool); // enables actions in need ?
 
+    // oncreate
+    void createActions();           // creates the basic actions
+    void createMenuBar();           // creates the menu
+    void createStatuBar();          // creates the state bar
+    void createTextEdit();          // creates the text editor window
+    void createContextMenu();       // creates context menu
     void readSettingsFromSystem();  // reads settings from the system
     void writeSettingsFromSystem(); // writes settings to the system
 
 private slots:
+    // basic functions
+    void getCurrentPage(); // gets current QPlainText
 
-    // 'file' slots
-    void getCurrentPage();                                                                                           // gets current QPlainText
-    void newDocument(const QString &text = "", const QString &title = "untitled.txt", const QString &textPath = ""); // displays a new text documnet
-    void openDocument();                                                                                             // opens a text documnet
-    void saveDocument();                                                                                             // saves the text document
-    void saveAsDocument();                                                                                           // the dialog of 'Save As'
-    void closeDocument();                                                                                            // closes current tab
+    // common 'file' slots
+    void newDocument(const QString &text = "", const QString &title = "untitled.txt", const QString &textPath = "");
+    void openDocument();   // opens a text documnet
+    void saveDocument();   // saves the text document
+    void saveAsDocument(); // the dialog of 'Save As'
+    void closeDocument();
+
+    // special 'file' slots
+    void saveAsSelectedDocument(int index = -1); // only use when close the other tab
+    void saveSelectedDocument(int index = -1);   // only use when close the other tab
+    void closeSelectedDocument(int index = -1);
+    void printCurrentDocument(); // connects to the printer and print current page                                                                                       // closes current tab
 
     // 'edit' slots
     void addTimetoEdit();
@@ -63,14 +72,8 @@ private slots:
     void aboutQt();
     void aboutThisApp();
 
-    // other slots (special_events.cpp)
-    void saveAsSelectedDocument(int index = -1); // only use when close the other tab
-    void saveSelectedDocument(int index = -1);   // only use when close the other tab
-    void closeSelectedDocument(int index = -1);
-    void printCurrentDocument(); // connects to the printer and print current page
-
 protected:
-    // special_events
+    // mainwindow_events
     void closeEvent(QCloseEvent *event) override;
 
 private:

@@ -18,10 +18,12 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
 SOURCES += \
     main.cpp \
     mainwindow_oncreate.cpp\
-    mainwindow_slots.cpp\
+    mainwindow_basic.cpp\
     mainwindow_slots_edit.cpp\
+    mainwindow_slots_file.cpp\
+    mainwindow_slots_help.cpp\
+    mainwindow_events.cpp\
     FindDialog.cpp\
-    special_events.cpp \
     tweefirstusedialog.cpp
 
 HEADERS += \
