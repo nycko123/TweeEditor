@@ -13,10 +13,9 @@ struct Document
 {
     QPlainTextEdit *textEdit;
     bool bFirstCreate = true; // creates the document for the first time
-    bool bSave = false;
     QString textPath;
 
-    Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true, const bool save = false) : textEdit(widget), textPath(path), bFirstCreate(first), bSave(save) {}
+    Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true) : textEdit(widget), textPath(path), bFirstCreate(first) {}
 };
 
 class QMenuBar;

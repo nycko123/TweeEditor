@@ -42,7 +42,6 @@ void MainWindow::newDocument(const QString &text, const QString &title, const QS
     if (!bEmptyPath)
     {
         document.back().bFirstCreate = false;
-        document.back().bSave = true;
     }
     document.back().textEdit->setFont(textFont);
 
@@ -124,7 +123,7 @@ retry:
 
     file.close();
 
-    document[currentText].bSave = true;
+    document[currentText].textEdit->document()->setModified(false);
     document[currentText].bFirstCreate = false;
 
     statuBar->showMessage(tr("Save file successfully"), 3000);
@@ -193,11 +192,10 @@ retry:
 
     QFileInfo info(file);
     tabWidget->setTabText(currentText, info.fileName());
-
-    document[currentText].bSave = true;
-    document[currentText].bFirstCreate = false;
-
     file.close();
+
+    document[currentText].textEdit->document()->setModified(false);
+    document[currentText].bFirstCreate = false;
 
     statuBar->showMessage(tr("Save file successfully"), 3000);
 }

@@ -119,7 +119,7 @@ void MainWindow::closeSelectedDocument(int index)
 
 void MainWindow::printCurrentDocument()
 {
-    if (!document[currentText].bSave)
+    if (document[currentText].textEdit->document()->isModified())
         saveDocument();
 
     QPrinter *printer = new QPrinter(QPrinter::HighResolution);
