@@ -126,7 +126,7 @@ void MainWindow::printCurrentDocument()
     QPrintDialog *printDialog = new QPrintDialog(printer, this);
     printDialog->setWindowTitle("Select a printer");
     printDialog->addEnabledOption(QAbstractPrintDialog::PrintSelection);
-    if (printDialog->exec())
+    if (printDialog->exec() == QDialog::Accepted)
     {
         printer = printDialog->printer();
         printer->setOutputFileName(document[currentText].textPath);
