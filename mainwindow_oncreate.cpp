@@ -34,13 +34,13 @@ void MainWindow::createActions()
     open = new QAction(QIcon(":/ico/open.png"), tr("Open"));
     save = new QAction(QIcon(":/ico/save.png"), tr("Save"));
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
-    printPage = new QAction(QIcon(":/ico/printer.jpg"), tr("Print"));
-    closeTab = new QAction(QIcon(":/ico/closeTab.jpg"), tr("Close"));
-    exitApp = new QAction(QIcon(":/ico/exit.jpg"), tr("Exit"));
+    printPage = new QAction(QIcon(":/ico/printer.png"), tr("Print"));
+    closeTab = new QAction(QIcon(":/ico/closeTab.png"), tr("Close"));
+    exitApp = new QAction(QIcon(":/ico/exit.png"), tr("Exit"));
 
-    addTime = new QAction(QIcon(":/ico/addTime.jpg"), tr("Add time"));
+    addTime = new QAction(QIcon(":/ico/addTime.png"), tr("Add time"));
     addFileName = new QAction(QIcon(":/ico/file.png"), tr("Add file name"));
-    font = new QAction(QIcon(":/ico/font.jpg"), tr("Font"));
+    font = new QAction(QIcon(":/ico/font.png"), tr("Font"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
