@@ -12,11 +12,9 @@ void MainWindow::closeEvent(QCloseEvent *event)
         if (i.textEdit->document()->isModified())
         {
             auto res = QMessageBox::information(this, "TweeEdit Tip",
-                                                tr("There\'re <b>some files unsaved</b>.\nDo you want to save them ?"),
+                                                tr("There\'re <b>some files unsaved</b>.\nAre you sure you want to exit?"),
                                                 QMessageBox::Yes | QMessageBox::No);
             if (res == QMessageBox::No)
-                event->accept();
-            else
             {
                 event->ignore();
                 bAccept = false;

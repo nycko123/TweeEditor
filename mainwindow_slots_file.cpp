@@ -119,8 +119,10 @@ void MainWindow::closeDocument()
     {
         int res = QMessageBox::information(this, "TweeEdit Tip",
                                            tr("This file is <b>unsaved</b>.\nDo you want save it ?"),
-                                           QMessageBox::Yes | QMessageBox::No);
-        if (res == QMessageBox::Yes)
+                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+        if (res == QMessageBox::Cancel)
+            return;
+        else if (res == QMessageBox::Yes)
             saveDocument();
     }
 
@@ -256,8 +258,10 @@ void MainWindow::closeSelectedDocument(int index)
     {
         int res = QMessageBox::information(this, "TweeEdit Tip",
                                            tr("There\'re <b>some files unsaved</b>.\nDo you want save it ?"),
-                                           QMessageBox::Yes | QMessageBox::No);
-        if (res == QMessageBox::Yes)
+                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+        if (res == QMessageBox::Cancel)
+            return;
+        else if (res == QMessageBox::Yes)
             saveSelectedDocument(index);
     }
 
