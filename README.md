@@ -1,12 +1,12 @@
-<center>
-<h1>TweeEditor</h1></br><b style='font-size:.9em;color:#1faaa7'>A text editor powered by Qt 5</b>
-</center>
+# TweeEditor
 
-![Introduce Image](introduce.png)
+### A simple text editor powered by Qt
 
 
 Chinese translation: _Linhk_
-Origin translation: _TweeChalice_
+
+
+Original translation: _TweeChalice_
 
 
 # Under Mozilla Public License 2.0
