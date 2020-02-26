@@ -6,8 +6,6 @@
 Chinese translation: _Linhk_
 
 
-Original translation: _TweeChalice_
-
 
 # Under Mozilla Public License 2.0
 
