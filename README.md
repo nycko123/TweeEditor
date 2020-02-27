@@ -1,4 +1,4 @@
-# TweeEditor
+![logo](https://cdn.jsdelivr.net/gh/Linhk1606/Linhk1606@V2.0.5/TweeEditor.svg)
 
 ### A simple text editor powered by Qt
 
