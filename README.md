@@ -1,4 +1,4 @@
-## TweeEditor
+# TweeEditor
 
 ### A simple text editor powered by Qt
 
