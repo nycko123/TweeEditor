@@ -3,6 +3,8 @@
 ### A simple text editor powered by Qt
 
 Polish translation:_nycko123_
+
+
 Chinese translation: _Linhk_
 
 
