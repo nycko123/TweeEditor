@@ -5,6 +5,7 @@
 #include <QPlainTextEdit>
 #include <QVector>
 #include "FindDialog.h"
+#include "TweeLanguageDialog.h"
 
 constexpr int MAX_QPLAINTEXT = 11;
 
@@ -31,6 +32,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow() = default;
+    // uses it while starting (basic)
+    void languageDisplayed(const QString &str);
 
 private:
     // basic functions
@@ -67,6 +70,7 @@ private slots:
     void addFileNametoEdit();
     void fontSelect();
     void findTextDialog();
+    void selectLanguage();
 
     // 'help' slots
     void aboutQt();
@@ -98,12 +102,15 @@ private:
     QAction *addFileName;
     QAction *findText;
     QAction *font;
+    QAction *displayLanguage;
 
     // 'help' actions
     QAction *aboutQtAction;
     QAction *aboutThisAppAction;
 
+    // 'edit' dialogs
     TweeFindDialog *findDialog;
+    TweeLanguageDialog *languageDialog;
 
     int currentText = 0;
     int countText = 0;
@@ -111,5 +118,7 @@ private:
 
     // the displaying of the text
     QFont textFont;
+    // the displaying language of the application
+    QString selectedLanguage;
 };
 #endif // MAINWINDOW_H

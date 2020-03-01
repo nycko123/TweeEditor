@@ -19,6 +19,9 @@
         <file>ico/font.png</file>
         <file>ico/closeTab.png</file>
         <file>ico/addTime.png</file>
-        <file>ico/TweeEditor.svg</file>
+        <file>ico/TweeEditor-introduction-ico.png</file>
+        <file>ico/selectLanguage.jpg</file>
+        <file>TweeSimpleEdit_zh_CN.qm</file>
+        <file>TweeSimpleEdit_pl_PL.qm</file>
     </qresource>
 </RCC>

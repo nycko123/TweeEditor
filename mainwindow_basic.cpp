@@ -22,3 +22,8 @@ void MainWindow::setEnableActions(bool isEnabled)
     addFileName->setEnabled(isEnabled);
     findText->setEnabled(isEnabled);
 }
+
+void MainWindow::languageDisplayed(const QString &str)
+{
+    this->selectedLanguage=str;
+}

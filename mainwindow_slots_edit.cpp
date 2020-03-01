@@ -18,11 +18,16 @@ void MainWindow::addFileNametoEdit()
 
 void MainWindow::fontSelect()
 {
-    bool bSelect;
-    QFont selectedFont = QFontDialog::getFont(&bSelect, this);
-    if (bSelect)
+    QFontDialog *fontDialog=new QFontDialog(textFont,this);
+    fontDialog->setFont(QFont("Microsoft YaHei"));
+    fontDialog->setWindowIcon(this->windowIcon());
+    fontDialog->setWindowTitle(tr("Select the font"));
+    fontDialog->setCurrentFont(this->textFont);
+
+
+    if (fontDialog->exec()==QDialog::Accepted)
     {
-        textFont = selectedFont;
+        textFont = fontDialog->selectedFont();
 
         // updates all the font displayed
         for (auto &i : document)
@@ -38,4 +43,22 @@ void MainWindow::findTextDialog()
     findDialog = new TweeFindDialog(document[currentText].textEdit, this);
     findDialog->setModal(true);
     findDialog->show();
+}
+
+void MainWindow::selectLanguage()
+{
+    languageDialog=new TweeLanguageDialog(selectedLanguage,this);
+
+    if(languageDialog->exec()==QDialog::Accepted)
+    {
+        selectedLanguage=languageDialog->selectedLanguage();
+        qDebug()<<"Selected language: "<<selectedLanguage<<"\n";
+
+        int res=QMessageBox::information(this,tr("You\'ve changed the displaying of TweeEditor"),
+                                           tr("It needs <b>restart</b>. \nNow?"),
+                                           QMessageBox::Yes|QMessageBox::No
+                                           );
+        if(res==QMessageBox::Yes)
+            this->close();
+    }
 }

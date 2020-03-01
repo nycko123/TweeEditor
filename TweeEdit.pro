@@ -16,6 +16,8 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    TweeFirstUseDialog.cpp \
+    TweeLanguageDialog.cpp \
     main.cpp \
     mainwindow_oncreate.cpp\
     mainwindow_basic.cpp\
@@ -23,18 +25,19 @@ SOURCES += \
     mainwindow_slots_file.cpp\
     mainwindow_slots_help.cpp\
     mainwindow_events.cpp\
-    FindDialog.cpp\
-    tweefirstusedialog.cpp
+    FindDialog.cpp
 
 HEADERS += \
+    TweeFirstUseDialog.h \
+    TweeLanguageDialog.h \
     mainwindow.h\
-    FindDialog.h \
-    tweefirstusedialog.h
+    FindDialog.h
 
 RESOURCES += resource.qrc
 
 TRANSLATIONS += \
-    TweeSimpleEdit_zh_CN.ts
+    TweeSimpleEdit_zh_CN.ts\
+    TweeSimpleEdit_pl_PL.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

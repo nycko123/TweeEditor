@@ -32,6 +32,7 @@ void MainWindow::createActions()
     addTime = new QAction(QIcon(":/ico/addTime.png"), tr("Add time"));
     addFileName = new QAction(QIcon(":/ico/file.png"), tr("Add file name"));
     font = new QAction(QIcon(":/ico/font.png"), tr("Font"));
+    displayLanguage=new QAction(QIcon(":/ico/selectLanguage.jpg"),tr("Language"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
@@ -58,6 +59,7 @@ void MainWindow::createActions()
     addTime->setStatusTip(tr("Adds the current time to the current page"));
     addFileName->setStatusTip(tr("Adds the current file name to the current page"));
     font->setStatusTip(tr("Sets the global text"));
+    displayLanguage->setStatusTip(tr("Sets the displaying of the language"));
     findText->setStatusTip(tr("Find the text"));
 
     save->setEnabled(false);
@@ -69,7 +71,7 @@ void MainWindow::createActions()
     addFileName->setEnabled(false);
     findText->setEnabled(false);
 
-    aboutQtAction->setStatusTip(tr("The information about Qt."));
+    aboutQtAction->setStatusTip(tr("The information about Qt"));
     aboutThisAppAction->setStatusTip(tr("About TweeEditor"));
 
     // connects
@@ -84,6 +86,7 @@ void MainWindow::createActions()
     connect(addTime, SIGNAL(triggered()), this, SLOT(addTimetoEdit()));
     connect(addFileName, SIGNAL(triggered()), this, SLOT(addFileNametoEdit()));
     connect(font, SIGNAL(triggered()), this, SLOT(fontSelect()));
+    connect(displayLanguage,SIGNAL(triggered()),this,SLOT(selectLanguage()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
     connect(aboutQtAction, SIGNAL(triggered()), this, SLOT(aboutQt()));
@@ -129,6 +132,7 @@ void MainWindow::createMenuBar()
     edit->addSeparator();
 
     edit->addAction(font);
+    edit->addAction(displayLanguage);
 
     edit->addSeparator();
 
@@ -188,38 +192,20 @@ void MainWindow::createTextEdit()
 
 void MainWindow::readSettingsFromSystem()
 {
-    QSettings appSettings("TweeLinhk Team", "TweeTextEditor");
+    QSettings appSettings("TweeApp", "TweeTextEditor");
 
     // reads font saved in the system
-    QString fullFont = appSettings.value("textFont", "Microsoft YaHei").toString();
-    QString fontName;
-    int fontName_pos = 0;
+    QVariant font_settings=appSettings.value("textFont", "Microsoft YaHei");
 
-    for (auto &i : fullFont)
-    {
-        if (i == ',')
-        {
-            fontName = fullFont.left(fontName_pos);
-            break;
-        }
-        fontName_pos++;
-    }
-
-    textFont = fontName;
-    textFont.setPixelSize(appSettings.value("textFont_PixelSize").toInt());
-    textFont.setPointSize(appSettings.value("textFont_PointSize").toInt());
-
-    qDebug() << "fullFont: " << fullFont << "\n"
-             << "fontName: " << fontName << "\n";
-    qDebug() << "TextFont: " << textFont.toString() << "\n";
+    textFont=font_settings.value<QFont>();
 }
 
 void MainWindow::writeSettingsFromSystem()
 {
-    QSettings appSettings("TweeLinhk Team", "TweeTextEditor");
-    appSettings.setValue("textFont", textFont.toString());
-    appSettings.setValue("textFont_PixelSize", textFont.pixelSize());
-    appSettings.setValue("textFont_PointSize", textFont.pointSize());
+    QSettings appSettings("TweeApp", "TweeTextEditor");
+    appSettings.setValue("textFont", textFont);
+    appSettings.setValue("language",selectedLanguage);
 
     qDebug() << "TextFont: " << textFont.toString() << "\n";
+    qDebug() << "Selected language: " << selectedLanguage<< "\n";
 }
