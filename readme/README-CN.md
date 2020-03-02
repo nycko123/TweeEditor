@@ -1,3 +1,5 @@
+[English(Orignal) Doc](https://github.com/TweeChalice/TweeEditor/blob/master/README.md)
+
 ![logo](https://cdn.jsdelivr.net/gh/Linhk1606/Linhk1606@V2.0.5/TweeEditor.svg)
 
 ### 一个简单的文本编辑器, 基于[Qt](https://www.qt.io)制作
