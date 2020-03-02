@@ -51,7 +51,7 @@ retry:
     if (!file.open(QIODevice::ReadOnly))
     {
         statuBar->showMessage(tr("Open failed!"), 3000);
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t open this file."), QMessageBox::Retry, QMessageBox::Ok);
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t open this file"), QMessageBox::Retry, QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;

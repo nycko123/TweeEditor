@@ -9,7 +9,7 @@
 #include <QHBoxLayout>
 #include <QMainWindow>
 
-#include "tweefirstusedialog.h"
+#include "TweeFirstUseDialog.h"
 
 void TweeFirstUseDialog::setAcStatu()
 {

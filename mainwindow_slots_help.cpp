@@ -9,7 +9,7 @@ void MainWindow::aboutQt()
 
 void MainWindow::aboutThisApp()
 {
-    const QString introduce = "<center><img src=\":/ico/TweeEditor.svg\" /></center<br> <h2>This is an open-source application.</h2>\n\n<h3>Made by <i>TweeChalice</i> and <i>Linhk</i></h3>.";
+    const QString introduce = "<center><img src=\":/ico/TweeEditor-introduction-ico.png\" /></center<br> <h2>This is an open-source application.</h2>\n\n<h3>Made by <i>TweeChalice</i> and <i>Linhk</i></h3>.";
     QMessageBox *messageBox = new QMessageBox;
     messageBox->setWindowIcon(QIcon(":/ico/TweeEditor.jpg"));
     messageBox->setText(introduce);
