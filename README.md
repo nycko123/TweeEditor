@@ -4,7 +4,7 @@
 
 ### A simple text editor powered by [Qt](https://www.qt.io)
 
-* Polish translation:_nycko123_
+* Polish translation: _nycko123_
 * Chinese translation: _Linhk_
 
 ## Attention!
