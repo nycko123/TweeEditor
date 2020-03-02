@@ -1,13 +1,9 @@
 ![logo](https://cdn.jsdelivr.net/gh/Linhk1606/Linhk1606@V2.0.5/TweeEditor.svg)
 
-### A simple text editor powered by Qt
+### A simple text editor powered by [Qt](https://www.qt.io)
 
-Polish translation:_nycko123_
-
-
-Chinese translation: _Linhk_
-
-
+* Polish translation:_nycko123_
+* Chinese translation: _Linhk_
 
 ## Attention!
 
