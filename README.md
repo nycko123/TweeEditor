@@ -7,7 +7,7 @@
 * Polish translation: _nycko123_
 * Chinese translation: _Linhk_
 
-## Attention!
+## Licensed under Mozilla Public License
 
 > This project is under Mozilla Public License 2.0
 >
