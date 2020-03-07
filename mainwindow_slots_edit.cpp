@@ -4,12 +4,11 @@
 
 #include "mainwindow.h"
 
-
 void MainWindow::addTimetoEdit()
 {
-    QTime currentTime=QTime::currentTime();
+    QTime currentTime = QTime::currentTime();
     document[currentText].textEdit->appendPlainText(currentTime.toString());
-} 
+}
 
 void MainWindow::addFileNametoEdit()
 {
@@ -18,14 +17,13 @@ void MainWindow::addFileNametoEdit()
 
 void MainWindow::fontSelect()
 {
-    QFontDialog *fontDialog=new QFontDialog(textFont,this);
+    QFontDialog *fontDialog = new QFontDialog(textFont, this);
     fontDialog->setFont(QFont("Microsoft YaHei"));
     fontDialog->setWindowIcon(this->windowIcon());
     fontDialog->setWindowTitle(tr("Select the font"));
     fontDialog->setCurrentFont(this->textFont);
 
-
-    if (fontDialog->exec()==QDialog::Accepted)
+    if (fontDialog->exec() == QDialog::Accepted)
     {
         textFont = fontDialog->selectedFont();
 
@@ -47,18 +45,17 @@ void MainWindow::findTextDialog()
 
 void MainWindow::selectLanguage()
 {
-    languageDialog=new TweeLanguageDialog(selectedLanguage,this);
+    languageDialog = new TweeLanguageDialog(selectedLanguage, this);
 
-    if(languageDialog->exec()==QDialog::Accepted)
+    if (languageDialog->exec() == QDialog::Accepted)
     {
-        selectedLanguage=languageDialog->selectedLanguage();
-        qDebug()<<"Selected language: "<<selectedLanguage<<"\n";
+        selectedLanguage = languageDialog->selectedLanguage();
+        qDebug() << "Selected language: " << selectedLanguage << "\n";
 
-        int res=QMessageBox::information(this,tr("You\'ve changed the displaying of TweeEditor"),
+        int res = QMessageBox::information(this, tr("You\'ve changed the displaying of TweeEditor"),
                                            tr("It needs <b>restart</b>. \nNow?"),
-                                           QMessageBox::Yes|QMessageBox::No
-                                           );
-        if(res==QMessageBox::Yes)
+                                           QMessageBox::Yes | QMessageBox::No);
+        if (res == QMessageBox::Yes)
             this->close();
     }
 }

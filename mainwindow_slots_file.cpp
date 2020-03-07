@@ -8,7 +8,7 @@
 
 // common 'file' slots
 
-void MainWindow::newDocument(const QString &text, const QString &title, const QString &textPath)
+void MainWindow::newDocument(const QByteArray &text, const QString &title, const QString &textPath)
 {
     bool bEmptyPath = textPath.isEmpty();
 
@@ -56,14 +56,13 @@ retry:
             goto retry;
         return;
     }
-    QTextStream stream(&file);
-    QString text = stream.readAll();
+    QByteArray originText = file.readAll();
 
     // gets the name of the text
     QFileInfo info(path);
 
     // displays the text
-    newDocument(text, info.fileName(), path);
+    newDocument(originText, info.fileName(), path);
 }
 
 void MainWindow::saveDocument()
@@ -99,7 +98,7 @@ retry:
             goto retry;
         return;
     }
-    file.write(text.toUtf8());
+    file.write(text.toLocal8Bit());
     QFileInfo info(file);
     tabWidget->setTabText(currentText, info.fileName());
 
@@ -163,7 +162,7 @@ retry:
             goto retry;
         return;
     }
-    file.write(text.toUtf8());
+    file.write(text.toLocal8Bit());
 
     QFileInfo info(file);
     tabWidget->setTabText(currentText, info.fileName());
@@ -203,7 +202,7 @@ retry:
             goto retry;
         return;
     }
-    file.write(text.toUtf8());
+    file.write(text.toLocal8Bit());
 
     file.close();
 
@@ -243,7 +242,7 @@ retry:
             goto retry;
         return;
     }
-    file.write(text.toUtf8());
+    file.write(text.toLocal8Bit());
 
     file.close();
 
@@ -295,6 +294,6 @@ void MainWindow::printCurrentDocument()
     delete printer;
     delete printDialog;
 
-    printer=nullptr;
-    printDialog=nullptr;
+    printer = nullptr;
+    printDialog = nullptr;
 }

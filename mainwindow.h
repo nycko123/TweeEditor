@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPlainTextEdit>
 #include <QVector>
+#include <QTextCodec>
 #include "FindDialog.h"
 #include "TweeLanguageDialog.h"
 
@@ -12,9 +13,9 @@ constexpr int MAX_QPLAINTEXT = 11;
 // the information and the widget of the text document
 struct Document
 {
-    QPlainTextEdit *textEdit=nullptr;
+    QPlainTextEdit *textEdit = nullptr;
     bool bFirstCreate = true; // creates the document for the first time
-    QString textPath="";
+    QString textPath = "";
 
     Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true) : textEdit(widget), textPath(path), bFirstCreate(first) {}
 };
@@ -24,6 +25,7 @@ class QToolBar;
 class QAction;
 class QStatusBar;
 class QTabWidget;
+class QComboBox;
 
 class MainWindow : public QMainWindow
 {
@@ -42,6 +44,7 @@ private:
     // oncreate
     void createActions();           // creates the basic actions
     void createMenuBar();           // creates the menu
+    void setEncodings();            // sets encodings
     void createStatuBar();          // creates the state bar
     void createTextEdit();          // creates the text editor window
     void createContextMenu();       // creates context menu
@@ -50,10 +53,11 @@ private:
 
 private slots:
     // basic functions
-    void getCurrentPage(); // gets current QPlainText
+    void getCurrentPage();      // gets current QPlainText
+    void setTextEncoding(const QString&);    // sets the encoding of all the text
 
     // common 'file' slots
-    void newDocument(const QString &text = "", const QString &title = "untitled.txt", const QString &textPath = "");
+    void newDocument(const QByteArray &text = "", const QString &title = "untitled.txt", const QString &textPath = "");
     void openDocument();   // opens a text documnet
     void saveDocument();   // saves the text document
     void saveAsDocument(); // the dialog of 'Save As'
@@ -120,5 +124,13 @@ private:
     QFont textFont;
     // the displaying language of the application
     QString selectedLanguage;
+
+    QAction *seperator;
+
+    // for the statu-bar
+    QComboBox *selectTextCode;
+
+    // saves the encodings of the text
+    QTextCodec *textCode=QTextCodec::codecForName("UTF-8");
 };
 #endif // MAINWINDOW_H

@@ -11,6 +11,7 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
     readSettingsFromSystem();
+    setEncodings();
     createActions();
     createMenuBar();
     createContextMenu();
@@ -32,7 +33,7 @@ void MainWindow::createActions()
     addTime = new QAction(QIcon(":/ico/addTime.png"), tr("Add time"));
     addFileName = new QAction(QIcon(":/ico/file.png"), tr("Add file name"));
     font = new QAction(QIcon(":/ico/font.png"), tr("Font"));
-    displayLanguage=new QAction(QIcon(":/ico/selectLanguage.jpg"),tr("Language"));
+    displayLanguage = new QAction(QIcon(":/ico/selectLanguage.jpg"), tr("Language"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
@@ -62,14 +63,7 @@ void MainWindow::createActions()
     displayLanguage->setStatusTip(tr("Sets the displaying of the language"));
     findText->setStatusTip(tr("Find the text"));
 
-    save->setEnabled(false);
-    saveAs->setEnabled(false);
-    closeTab->setEnabled(false);
-    printPage->setEnabled(false);
-
-    addTime->setEnabled(false);
-    addFileName->setEnabled(false);
-    findText->setEnabled(false);
+    setEnableActions(false);
 
     aboutQtAction->setStatusTip(tr("The information about Qt"));
     aboutThisAppAction->setStatusTip(tr("About TweeEditor"));
@@ -86,21 +80,37 @@ void MainWindow::createActions()
     connect(addTime, SIGNAL(triggered()), this, SLOT(addTimetoEdit()));
     connect(addFileName, SIGNAL(triggered()), this, SLOT(addFileNametoEdit()));
     connect(font, SIGNAL(triggered()), this, SLOT(fontSelect()));
-    connect(displayLanguage,SIGNAL(triggered()),this,SLOT(selectLanguage()));
+    connect(displayLanguage, SIGNAL(triggered()), this, SLOT(selectLanguage()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
     connect(aboutQtAction, SIGNAL(triggered()), this, SLOT(aboutQt()));
     connect(aboutThisAppAction, SIGNAL(triggered()), this, SLOT(aboutThisApp()));
+
+    seperator = new QAction;
+    seperator->setSeparator(true);
+}
+
+void MainWindow::setEncodings()
+{
+    selectTextCode = new QComboBox(this);
+
+    for (const QByteArray &i : QTextCodec::availableCodecs())
+        selectTextCode->addItem(QString(i));
+
+    connect(selectTextCode, &QComboBox::currentTextChanged, this, &MainWindow::setTextEncoding);
 }
 
 void MainWindow::createStatuBar()
 {
+    selectTextCode->setCurrentText("UTF-8");
+
     statuBar = new QStatusBar;
     this->setStatusBar(statuBar);
     QLabel *label = new QLabel(tr("<i>Ready</i>"));
-    label->setIndent(3);
 
-    statuBar->addWidget(label);
+    statuBar->addWidget(label, 1);
+
+    statuBar->addWidget(selectTextCode);
 }
 
 void MainWindow::createMenuBar()
@@ -158,8 +168,6 @@ void MainWindow::createContextMenu()
 {
     this->addAction(newText);
 
-    QAction *seperator = new QAction;
-    seperator->setSeparator(true);
     this->addAction(seperator);
 
     this->addAction(open);
@@ -195,17 +203,17 @@ void MainWindow::readSettingsFromSystem()
     QSettings appSettings("TweeApp", "TweeTextEditor");
 
     // reads font saved in the system
-    QVariant font_settings=appSettings.value("textFont", "Microsoft YaHei");
+    QVariant font_settings = appSettings.value("textFont", "Microsoft YaHei");
 
-    textFont=font_settings.value<QFont>();
+    textFont = font_settings.value<QFont>();
 }
 
 void MainWindow::writeSettingsFromSystem()
 {
     QSettings appSettings("TweeApp", "TweeTextEditor");
     appSettings.setValue("textFont", textFont);
-    appSettings.setValue("language",selectedLanguage);
+    appSettings.setValue("language", selectedLanguage);
 
     qDebug() << "TextFont: " << textFont.toString() << "\n";
-    qDebug() << "Selected language: " << selectedLanguage<< "\n";
+    qDebug() << "Selected language: " << selectedLanguage << "\n";
 }
