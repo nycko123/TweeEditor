@@ -5,41 +5,45 @@
 #include <QPlainTextEdit>
 #include <QVector>
 #include <QTextCodec>
+#include <utility>
 #include "FindDialog.h"
 #include "TweeLanguageDialog.h"
 
-constexpr int MAX_QPLAINTEXT = 11;
-
 // the information and the widget of the text document
-struct Document
-{
+struct Document {
     QPlainTextEdit *textEdit = nullptr;
     bool bFirstCreate = true; // creates the document for the first time
     QString textPath = "";
+    QTextCodec *textCode = QTextCodec::codecForName("UTF-8");
 
-    Document(QPlainTextEdit *widget = new QPlainTextEdit, const QString path = "", const bool first = true) : textEdit(widget), textPath(path), bFirstCreate(first) {}
+    explicit Document(QPlainTextEdit *widget = new QPlainTextEdit, QString path = "", const bool first = true)
+            : textEdit(
+            widget), textPath(std::move(path)), bFirstCreate(first) {}
 };
 
 class QMenuBar;
-class QToolBar;
+
+// class QToolBar;
+
 class QAction;
+
 class QStatusBar;
+
 class QTabWidget;
+
 class QComboBox;
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() = default;
-    // uses it while starting (basic)
-    void languageDisplayed(const QString &str);
+    explicit MainWindow(QWidget *parent = nullptr);
+
+    ~MainWindow() override = default;
 
 private:
     // basic functions
-    void setEnableActions(bool); // enables actions in need ?
+    void setEnableWidgets(bool); // enables actions in need ?
 
     // oncreate
     void createActions();           // creates the basic actions
@@ -52,12 +56,14 @@ private:
     void writeSettingsFromSystem(); // writes settings to the system
 
 private slots:
+
     // basic functions
     void getCurrentPage();      // gets current QPlainText
-    void setTextEncoding(const QString&);    // sets the encoding of all the text
+    void setTextEncoding(const QString &);    // sets the encoding of all the text
 
     // common 'file' slots
     void newDocument(const QByteArray &text = "", const QString &title = "untitled.txt", const QString &textPath = "");
+
     void openDocument();   // opens a text documnet
     void saveDocument();   // saves the text document
     void saveAsDocument(); // the dialog of 'Save As'
@@ -67,17 +73,24 @@ private slots:
     void saveAsSelectedDocument(int index = -1); // only use when close the other tab
     void saveSelectedDocument(int index = -1);   // only use when close the other tab
     void closeSelectedDocument(int index = -1);
-    void printCurrentDocument(); // connects to the printer and print current page                                                                                       // closes current tab
+
+    void
+    printCurrentDocument(); // connects to the printer and print current page                                                                                       // closes current tab
 
     // 'edit' slots
     void addTimetoEdit();
+
     void addFileNametoEdit();
+
     void fontSelect();
+
     void findTextDialog();
+
     void selectLanguage();
 
     // 'help' slots
     void aboutQt();
+
     void aboutThisApp();
 
 protected:
@@ -85,36 +98,36 @@ protected:
     void closeEvent(QCloseEvent *event) override;
 
 private:
-    QMenuBar *mainMenu;
-    QToolBar *toolBar;
-    QStatusBar *statuBar;
+    QMenuBar *mainMenu{};
+    // QToolBar *toolBar{};
+    QStatusBar *statuBar{};
 
-    QTabWidget *tabWidget;
+    QTabWidget *tabWidget{};
     QVector<Document> document;
 
     // 'file' actions
-    QAction *newText;
-    QAction *open;
-    QAction *save;
-    QAction *saveAs;
-    QAction *printPage;
-    QAction *closeTab;
-    QAction *exitApp;
+    QAction *newText{};
+    QAction *open{};
+    QAction *save{};
+    QAction *saveAs{};
+    QAction *printPage{};
+    QAction *closeTab{};
+    QAction *exitApp{};
 
     // 'edit' actions
-    QAction *addTime;
-    QAction *addFileName;
-    QAction *findText;
-    QAction *font;
-    QAction *displayLanguage;
+    QAction *addTime{};
+    QAction *addFileName{};
+    QAction *findText{};
+    QAction *font{};
+    QAction *displayLanguage{};
 
     // 'help' actions
-    QAction *aboutQtAction;
-    QAction *aboutThisAppAction;
+    QAction *aboutQtAction{};
+    QAction *aboutThisAppAction{};
 
     // 'edit' dialogs
-    TweeFindDialog *findDialog;
-    TweeLanguageDialog *languageDialog;
+    TweeFindDialog *findDialog{};
+    TweeLanguageDialog *languageDialog{};
 
     int currentText = 0;
     int countText = 0;
@@ -125,12 +138,10 @@ private:
     // the displaying language of the application
     QString selectedLanguage;
 
-    QAction *seperator;
+    QAction *seperator{};
 
     // for the statu-bar
-    QComboBox *selectTextCode;
-
-    // saves the encodings of the text
-    QTextCodec *textCode=QTextCodec::codecForName("UTF-8");
+    QComboBox *selectTextCode{};
 };
+
 #endif // MAINWINDOW_H

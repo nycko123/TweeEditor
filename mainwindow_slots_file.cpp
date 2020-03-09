@@ -1,18 +1,15 @@
 #include <QtWidgets>
 #include <QPrintDialog>
 #include <QPrinter>
-#include <QTime>
-#include <QDebug>
 
 #include "mainwindow.h"
 
 // common 'file' slots
 
-void MainWindow::newDocument(const QByteArray &text, const QString &title, const QString &textPath)
-{
+void MainWindow::newDocument(const QByteArray &text, const QString &title, const QString &textPath) {
     bool bEmptyPath = textPath.isEmpty();
 
-    setEnableActions(true);
+    setEnableWidgets(true);
 
     // default: put the new widget to the back of the queue
     totalText++;
@@ -37,8 +34,7 @@ void MainWindow::newDocument(const QByteArray &text, const QString &title, const
     qDebug() << "newDocument called, currentText: " << currentText << "\n";
 }
 
-void MainWindow::openDocument()
-{
+void MainWindow::openDocument() {
     // opens text
     const QString path = QFileDialog::getOpenFileName(this, tr("Select a documnet"), "", tr("All files (*.*)"));
     qDebug() << "Opened path: " << path << "\n";
@@ -47,11 +43,11 @@ void MainWindow::openDocument()
 
     // reads the text
     QFile file(path);
-retry:
-    if (!file.open(QIODevice::ReadOnly))
-    {
+    retry:
+    if (!file.open(QIODevice::ReadOnly)) {
         statuBar->showMessage(tr("Open failed!"), 3000);
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t open this file"), QMessageBox::Retry, QMessageBox::Ok);
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t open this file"), QMessageBox::Retry,
+                                        QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;
@@ -65,8 +61,7 @@ retry:
     newDocument(originText, info.fileName(), path);
 }
 
-void MainWindow::saveDocument()
-{
+void MainWindow::saveDocument() {
     qDebug() << "The path of the current file you want to save: " << document[currentText].textPath << "\n";
     qDebug() << "Is first create? " << document[currentText].bFirstCreate << "\n";
     qDebug() << "saveDocument called, currentText: " << currentText << "\n";
@@ -76,8 +71,7 @@ void MainWindow::saveDocument()
     qDebug() << "The text of the current file: " << text << "\n";
 
     // checks if the user is the first time to create this document
-    if (document[currentText].bFirstCreate)
-    {
+    if (document[currentText].bFirstCreate) {
         qDebug() << "The file needs SaveAs\n";
         saveAsDocument();
         return;
@@ -90,10 +84,10 @@ void MainWindow::saveDocument()
 
     // writes the text
     QFile file(path);
-retry:
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry, QMessageBox::Ok);
+    retry:
+    if (!file.open(QIODevice::WriteOnly)) {
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry,
+                                        QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;
@@ -110,12 +104,10 @@ retry:
     statuBar->showMessage(tr("Save file successfully"), 3000);
 }
 
-void MainWindow::closeDocument()
-{
+void MainWindow::closeDocument() {
     qDebug() << "currentText: " << currentText << "\n";
 
-    if (document[currentText].textEdit->document()->isModified())
-    {
+    if (document[currentText].textEdit->document()->isModified()) {
         int res = QMessageBox::information(this, "TweeEdit Tip",
                                            tr("This file is <b>unsaved</b>.\nDo you want save it ?"),
                                            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
@@ -131,13 +123,12 @@ void MainWindow::closeDocument()
     document.removeAt(currentText + 1);
 
     if (totalText == 0)
-        setEnableActions(false);
+        setEnableWidgets(false);
 
     statuBar->showMessage(tr("You have just closed a text document!"), 3000);
 }
 
-void MainWindow::saveAsDocument()
-{
+void MainWindow::saveAsDocument() {
     qDebug() << "SaveAs called\n";
     qDebug() << "The path of the current file you want to save: " << document[currentText].textPath << "\n";
     qDebug() << "Is first create? " << document[currentText].bFirstCreate << "\n";
@@ -154,10 +145,10 @@ void MainWindow::saveAsDocument()
 
     // writes the text
     QFile file(path);
-retry:
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry, QMessageBox::Ok);
+    retry:
+    if (!file.open(QIODevice::WriteOnly)) {
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry,
+                                        QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;
@@ -176,8 +167,7 @@ retry:
 
 // special 'file' slots
 
-void MainWindow::saveAsSelectedDocument(int index)
-{
+void MainWindow::saveAsSelectedDocument(int index) {
     qDebug() << "SaveAs called\n";
     qDebug() << "The path of the index file you want to save: " << document[index].textPath << "\n";
     qDebug() << "Is first create? " << document[index].bFirstCreate << "\n";
@@ -194,10 +184,10 @@ void MainWindow::saveAsSelectedDocument(int index)
 
     // writes the text
     QFile file(path);
-retry:
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry, QMessageBox::Ok);
+    retry:
+    if (!file.open(QIODevice::WriteOnly)) {
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry,
+                                        QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;
@@ -209,8 +199,7 @@ retry:
     statuBar->showMessage(tr("Save file successfully"), 3000);
 }
 
-void MainWindow::saveSelectedDocument(int index)
-{
+void MainWindow::saveSelectedDocument(int index) {
     qDebug() << "The path of the index file you want to save: " << document[index].textPath << "\n";
     qDebug() << "Is first create? " << document[index].bFirstCreate << "\n";
     qDebug() << "saveDocument called, index: " << index << "\n";
@@ -220,8 +209,7 @@ void MainWindow::saveSelectedDocument(int index)
     qDebug() << "The text of the index file: " << text << "\n";
 
     // checks if the user is the first time to create this document
-    if (document[index].bFirstCreate)
-    {
+    if (document[index].bFirstCreate) {
         qDebug() << "The file needs SaveAs\n";
         saveAsSelectedDocument(index);
         return;
@@ -234,10 +222,10 @@ void MainWindow::saveSelectedDocument(int index)
 
     // writes the text
     QFile file(path);
-retry:
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry, QMessageBox::Ok);
+    retry:
+    if (!file.open(QIODevice::WriteOnly)) {
+        int res = QMessageBox::critical(this, tr("Error!"), tr("Can\'t save this file."), QMessageBox::Retry,
+                                        QMessageBox::Ok);
         if (res == QMessageBox::Retry)
             goto retry;
         return;
@@ -249,12 +237,10 @@ retry:
     statuBar->showMessage(tr("Save file successfully"), 3000);
 }
 
-void MainWindow::closeSelectedDocument(int index)
-{
+void MainWindow::closeSelectedDocument(int index) {
     qDebug() << "indexText: " << currentText << "\n";
 
-    if (document[index].textEdit->document()->isModified())
-    {
+    if (document[index].textEdit->document()->isModified()) {
         int res = QMessageBox::information(this, "TweeEdit Tip",
                                            tr("There\'re <b>some files unsaved</b>.\nDo you want save it ?"),
                                            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
@@ -269,31 +255,26 @@ void MainWindow::closeSelectedDocument(int index)
     document.removeAt(index);
 
     if (totalText == 0)
-        setEnableActions(false);
+        setEnableWidgets(false);
 
     statuBar->showMessage(tr("You have just closed a text document!"), 3000);
 }
 
-void MainWindow::printCurrentDocument()
-{
+void MainWindow::printCurrentDocument() {
     if (document[currentText].textEdit->document()->isModified())
         saveDocument();
 
-    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
-    QPrintDialog *printDialog = new QPrintDialog(printer, this);
+    auto *printer = new QPrinter(QPrinter::HighResolution);
+    auto *printDialog = new QPrintDialog(printer, this);
 
     printDialog->setWindowTitle("Select a printer");
     printDialog->addEnabledOption(QAbstractPrintDialog::PrintSelection);
 
-    if (printDialog->exec() == QDialog::Accepted)
-    {
+    if (printDialog->exec() == QDialog::Accepted) {
         printer = printDialog->printer();
         printer->setOutputFileName(document[currentText].textPath);
         document[currentText].textEdit->document()->print(printer);
     }
     delete printer;
     delete printDialog;
-
-    printer = nullptr;
-    printDialog = nullptr;
 }

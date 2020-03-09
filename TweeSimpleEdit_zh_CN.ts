@@ -4,197 +4,233 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="24"/>
+        <location filename="mainwindow_oncreate.cpp" line="21"/>
         <source>New</source>
         <translation>新建</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="25"/>
+        <location filename="mainwindow_oncreate.cpp" line="22"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="26"/>
+        <location filename="mainwindow_oncreate.cpp" line="23"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="27"/>
+        <location filename="mainwindow_oncreate.cpp" line="24"/>
         <source>Save As</source>
         <translation>另存为</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="28"/>
+        <location filename="mainwindow_oncreate.cpp" line="25"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="29"/>
+        <location filename="mainwindow_oncreate.cpp" line="26"/>
         <source>Close</source>
         <translation>关闭页面</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="30"/>
+        <location filename="mainwindow_oncreate.cpp" line="27"/>
         <source>Exit</source>
         <translation>退出程序</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="32"/>
+        <location filename="mainwindow_oncreate.cpp" line="29"/>
         <source>Add time</source>
         <translation>插入当前时间</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="33"/>
+        <location filename="mainwindow_oncreate.cpp" line="30"/>
         <source>Add file name</source>
         <translation>插入当前文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="34"/>
+        <location filename="mainwindow_oncreate.cpp" line="31"/>
         <source>Font</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="35"/>
+        <location filename="mainwindow_oncreate.cpp" line="32"/>
+        <source>Language</source>
+        <translation>语言</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_oncreate.cpp" line="33"/>
         <source>Find</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="37"/>
+        <location filename="mainwindow_oncreate.cpp" line="35"/>
         <location filename="mainwindow_slots_help.cpp" line="7"/>
         <source>About Qt</source>
         <translation>关于 Qt</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="38"/>
-        <location filename="mainwindow_oncreate.cpp" line="73"/>
+        <location filename="mainwindow_oncreate.cpp" line="36"/>
+        <location filename="mainwindow_oncreate.cpp" line="65"/>
         <location filename="mainwindow_slots_help.cpp" line="16"/>
         <source>About TweeEditor</source>
         <translation>关于 TweeEditor</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="44"/>
+        <location filename="mainwindow_oncreate.cpp" line="42"/>
         <source>Ctrl+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="45"/>
+        <location filename="mainwindow_oncreate.cpp" line="43"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="47"/>
+        <location filename="mainwindow_oncreate.cpp" line="45"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="48"/>
+        <location filename="mainwindow_oncreate.cpp" line="46"/>
         <source>Alt+F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="51"/>
+        <location filename="mainwindow_oncreate.cpp" line="49"/>
         <source>Create a new text</source>
         <translation>创建新的文本文档</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="52"/>
+        <location filename="mainwindow_oncreate.cpp" line="50"/>
         <source>Save the current file</source>
         <translation>保存当前文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="53"/>
+        <location filename="mainwindow_oncreate.cpp" line="51"/>
         <source>Save a document as another file</source>
         <translation>另存当前文件为另一文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="54"/>
+        <location filename="mainwindow_oncreate.cpp" line="52"/>
         <source>Open a text file</source>
         <translation>打开文本文档</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="55"/>
+        <location filename="mainwindow_oncreate.cpp" line="53"/>
         <source>Print current document</source>
         <translation>打印当前文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="56"/>
+        <location filename="mainwindow_oncreate.cpp" line="54"/>
         <source>Close current tab</source>
         <translation>关闭当前文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="58"/>
+        <location filename="mainwindow_oncreate.cpp" line="56"/>
         <source>Adds the current time to the current page</source>
         <translation>添加当前时间到当前文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="59"/>
+        <location filename="mainwindow_oncreate.cpp" line="57"/>
         <source>Adds the current file name to the current page</source>
         <translation>添加当前文件名到当前文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="60"/>
+        <location filename="mainwindow_oncreate.cpp" line="58"/>
         <source>Sets the global text</source>
         <translation>设置全局文字</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="61"/>
+        <location filename="mainwindow_oncreate.cpp" line="59"/>
+        <source>Sets the displaying of the language</source>
+        <translation>设置显示的语言</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_oncreate.cpp" line="60"/>
         <source>Find the text</source>
         <translation>查找单词</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="72"/>
+        <location filename="mainwindow_oncreate.cpp" line="64"/>
         <source>The information about Qt</source>
         <oldsource>The information about Qt.</oldsource>
         <translation>有关 Qt 的信息</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="97"/>
+        <location filename="mainwindow_oncreate.cpp" line="105"/>
         <source>&lt;i&gt;Ready&lt;/i&gt;</source>
         <translation>&lt;i&gt;准备&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="107"/>
+        <location filename="mainwindow_oncreate.cpp" line="116"/>
         <source>&amp;File</source>
         <translation>&amp;文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="124"/>
+        <location filename="mainwindow_oncreate.cpp" line="133"/>
         <source>&amp;Edit</source>
         <translation>&amp;编辑</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="138"/>
+        <location filename="mainwindow_oncreate.cpp" line="148"/>
         <source>&amp;Help</source>
         <translation>&amp;帮助</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="54"/>
-        <location filename="mainwindow_slots_file.cpp" line="97"/>
-        <location filename="mainwindow_slots_file.cpp" line="161"/>
-        <location filename="mainwindow_slots_file.cpp" line="201"/>
-        <location filename="mainwindow_slots_file.cpp" line="241"/>
+        <location filename="mainwindow_basic.cpp" line="36"/>
+        <source>Attention!</source>
+        <translation>注意!</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="37"/>
+        <source>Save these documents before translating to &lt;b&gt;%1?&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="59"/>
+        <source>Error converting this document!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="61"/>
+        <source>Some chars that can&apos;t convert remaining in this document!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="69"/>
+        <source>Oops!</source>
+        <translation>出错了!</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="67"/>
+        <location filename="mainwindow_slots_file.cpp" line="49"/>
+        <location filename="mainwindow_slots_file.cpp" line="89"/>
+        <location filename="mainwindow_slots_file.cpp" line="150"/>
+        <location filename="mainwindow_slots_file.cpp" line="189"/>
+        <location filename="mainwindow_slots_file.cpp" line="227"/>
         <source>Error!</source>
         <translation>错误!</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="31"/>
+        <location filename="mainwindow_slots_file.cpp" line="28"/>
         <source>untitled-%1</source>
         <translation>无标题-%1</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="43"/>
+        <location filename="mainwindow_slots_file.cpp" line="39"/>
         <source>Select a documnet</source>
         <translation>选择一个文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="43"/>
-        <location filename="mainwindow_slots_file.cpp" line="152"/>
-        <location filename="mainwindow_slots_file.cpp" line="192"/>
+        <location filename="mainwindow_slots_file.cpp" line="39"/>
+        <location filename="mainwindow_slots_file.cpp" line="142"/>
+        <location filename="mainwindow_slots_file.cpp" line="181"/>
         <source>All files (*.*)</source>
         <translation>所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="53"/>
+        <location filename="mainwindow_slots_file.cpp" line="48"/>
         <source>Open failed!</source>
         <translation>打开错误!</translation>
     </message>
@@ -203,47 +239,47 @@
         <translation type="vanished">无法打开此文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="54"/>
+        <location filename="mainwindow_slots_file.cpp" line="49"/>
         <source>Can&apos;t open this file</source>
         <translation>无法打开该文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="97"/>
-        <location filename="mainwindow_slots_file.cpp" line="161"/>
-        <location filename="mainwindow_slots_file.cpp" line="201"/>
-        <location filename="mainwindow_slots_file.cpp" line="241"/>
+        <location filename="mainwindow_slots_file.cpp" line="89"/>
+        <location filename="mainwindow_slots_file.cpp" line="150"/>
+        <location filename="mainwindow_slots_file.cpp" line="189"/>
+        <location filename="mainwindow_slots_file.cpp" line="227"/>
         <source>Can&apos;t save this file.</source>
         <translation>无法保存此文件</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="111"/>
-        <location filename="mainwindow_slots_file.cpp" line="175"/>
-        <location filename="mainwindow_slots_file.cpp" line="210"/>
-        <location filename="mainwindow_slots_file.cpp" line="250"/>
+        <location filename="mainwindow_slots_file.cpp" line="104"/>
+        <location filename="mainwindow_slots_file.cpp" line="165"/>
+        <location filename="mainwindow_slots_file.cpp" line="199"/>
+        <location filename="mainwindow_slots_file.cpp" line="237"/>
         <source>Save file successfully</source>
         <translation>保存成功</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="121"/>
+        <location filename="mainwindow_slots_file.cpp" line="112"/>
         <source>This file is &lt;b&gt;unsaved&lt;/b&gt;.
 Do you want save it ?</source>
         <translation>这个文件 &lt;b&gt;尚未保存&lt;/b&gt;
 你确定要退出码 ?</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="137"/>
-        <location filename="mainwindow_slots_file.cpp" line="275"/>
+        <location filename="mainwindow_slots_file.cpp" line="128"/>
+        <location filename="mainwindow_slots_file.cpp" line="260"/>
         <source>You have just closed a text document!</source>
         <translation>你刚刚关闭了一个文本!</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="152"/>
-        <location filename="mainwindow_slots_file.cpp" line="192"/>
+        <location filename="mainwindow_slots_file.cpp" line="142"/>
+        <location filename="mainwindow_slots_file.cpp" line="181"/>
         <source>Save this text</source>
         <translation>保存此文本</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_file.cpp" line="260"/>
+        <location filename="mainwindow_slots_file.cpp" line="245"/>
         <source>There&apos;re &lt;b&gt;some files unsaved&lt;/b&gt;.
 Do you want save it ?</source>
         <translation>有一些 &lt;b&gt;文本未保存&lt;/b&gt;.
@@ -257,9 +293,20 @@ Are you sure you want to exit?</source>
 你确定要退出吗 ?</translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_edit.cpp" line="24"/>
+        <location filename="mainwindow_slots_edit.cpp" line="21"/>
         <source>Select the font</source>
         <translation>选择字体</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_slots_edit.cpp" line="53"/>
+        <source>You&apos;ve changed the displaying of TweeEditor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_slots_edit.cpp" line="54"/>
+        <source>It needs &lt;b&gt;restart&lt;/b&gt;. 
+Now?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -331,12 +378,12 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="TweeFirstUseDialog.cpp" line="28"/>
         <source>I have read this CAREFULLY and agree with it</source>
-        <translation>我已 仔细地 阅读了这个条约 并且 完全同意</translation>
+        <translation>我已仔细阅读并且同意条约</translation>
     </message>
     <message>
         <location filename="TweeFirstUseDialog.cpp" line="29"/>
         <source>I DO NOT accept this license and exit</source>
-        <translation>我 不同意该条约 并且 退出</translation>
+        <translation>我不同意并且退出使用</translation>
     </message>
     <message>
         <location filename="TweeFirstUseDialog.cpp" line="30"/>
@@ -346,7 +393,7 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="TweeFirstUseDialog.cpp" line="31"/>
         <source>Cancel (Exit)</source>
-        <translation>取消 (并退出)</translation>
+        <translation>取消并退出</translation>
     </message>
     <message>
         <location filename="TweeFirstUseDialog.cpp" line="44"/>
@@ -362,6 +409,14 @@ Are you sure you want to exit?</source>
         <location filename="TweeFirstUseDialog.cpp" line="83"/>
         <source>Error preparing data!</source>
         <translation>收集数据出错!</translation>
+    </message>
+</context>
+<context>
+    <name>TweeLanguageDialog</name>
+    <message>
+        <location filename="TweeLanguageDialog.cpp" line="7"/>
+        <source>Select the language displayed</source>
+        <translation type="unfinished">选择要显示的语言</translation>
     </message>
 </context>
 </TS>

@@ -11,8 +11,7 @@
 
 #include "FindDialog.h"
 
-TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDialog(parent)
-{
+TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDialog(parent) {
     // sets up
     currentTextEdit = new QPlainTextEdit;
     cancel = new QPushButton(tr("Cancel"));
@@ -73,8 +72,7 @@ TweeFindDialog::TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent) : QDia
     this->setFixedSize(sizeHint());
 }
 
-void TweeFindDialog::findEnteredText()
-{
+void TweeFindDialog::findEnteredText() {
     bool res = currentTextEdit->find(findText->text(), findWay);
 
     if (!res)
@@ -85,22 +83,18 @@ void TweeFindDialog::findEnteredText()
 
 // slots
 
-void TweeFindDialog::findIncase()
-{
+void TweeFindDialog::findIncase() {
     findWay = FIND_INCASESENTIVILY;
 }
 
-void TweeFindDialog::findWhole()
-{
+void TweeFindDialog::findWhole() {
     findWay = FIND_WHOLEWORD;
 }
 
-void TweeFindDialog::findBack()
-{
+void TweeFindDialog::findBack() {
     findWay = findWay | FIND_BACKWARD;
 }
 
-void TweeFindDialog::findCase()
-{
+void TweeFindDialog::findCase() {
     findWay = findWay | FIND_CASESENTIVILY;
 }

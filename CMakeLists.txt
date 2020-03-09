@@ -32,7 +32,7 @@ set(MAINWINDOW_SOURCES
         mainwindow_oncreate.cpp mainwindow_events.cpp mainwindow_basic.cpp
         )
 
-add_executable(TweeEdit WIN32 main.cpp
+add_executable(TweeEdit main.cpp
           ${RESOURCE_FILES} ${DIALOG_HEADERS} ${DIALOG_SOURCES}
             ${MAINWINDOW_HEADERS} ${MAINWINDOW_SOURCES}
         ${RESOURCE_FILES}

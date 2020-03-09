@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     // qDebug() << res << "\n";
     // qDebug() << "Selected language:" << language << "\n";
 
-    MainWindow *w = new MainWindow;
+    auto *w = new MainWindow;
 
     //w->languageDisplayed(language);
     w->setFont(QFont("Microsoft YaHei"));
@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
 
     if (firstUse)
     {
-        TweeFirstUseDialog *dialog = new TweeFirstUseDialog(w);
+        auto* dialog = new TweeFirstUseDialog(w);
         dialog->show();
 
         settings.setValue("firstUse", false);
     }
 
-    return app.exec();
+    return QApplication::exec();
 }

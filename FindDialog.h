@@ -10,16 +10,20 @@
 #define FIND_BACKWARD QTextDocument::FindBackward
 
 class QPushButton;
+
 class QLineEdit;
+
 class QPlainTextEdit;
+
 class QRadioButton;
+
 class QCheckBox;
 
-class TweeFindDialog : public QDialog
-{
-    Q_OBJECT
+class TweeFindDialog : public QDialog {
+Q_OBJECT
 
 private slots:
+
     void findEnteredText(); // when button 'ok' clicks
     void findIncase();      // presses the 'findIn...' radio button
     void findWhole();       // presses the 'findWord' radio button
