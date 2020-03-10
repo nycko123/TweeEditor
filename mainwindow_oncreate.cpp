@@ -22,6 +22,7 @@ void MainWindow::createActions() {
     open = new QAction(QIcon(":/ico/open.png"), tr("Open"));
     save = new QAction(QIcon(":/ico/save.png"), tr("Save"));
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
+    encodingAction = new QAction(QIcon(":/ico/encoding.jpg"), tr("Select encodings"));
     printPage = new QAction(QIcon(":/ico/printer.png"), tr("Print"));
     closeTab = new QAction(QIcon(":/ico/closeTab.png"), tr("Close"));
     exitApp = new QAction(QIcon(":/ico/exit.png"), tr("Exit"));
@@ -39,6 +40,7 @@ void MainWindow::createActions() {
     open->setShortcut(QKeySequence::Open);
     save->setShortcut(QKeySequence::Save);
     saveAs->setShortcut(QKeySequence::SaveAs);
+    encodingAction->setShortcut(tr("Ctrl+E"));
     closeTab->setShortcut(tr("Ctrl+W"));
     exitApp->setShortcut(tr("Ctrl+Q"));
 
@@ -50,6 +52,7 @@ void MainWindow::createActions() {
     save->setStatusTip(tr("Save the current file"));
     saveAs->setStatusTip(tr("Save a document as another file"));
     open->setStatusTip(tr("Open a text file"));
+    encodingAction->setStatusTip(tr("Select the current encodings"));
     printPage->setStatusTip(tr("Print current document"));
     closeTab->setStatusTip(tr("Close current tab"));
 
@@ -70,6 +73,7 @@ void MainWindow::createActions() {
     connect(save, SIGNAL(triggered()), this, SLOT(saveDocument()));
     connect(saveAs, SIGNAL(triggered()), this, SLOT(saveAsDocument()));
     connect(printPage, SIGNAL(triggered()), this, SLOT(printCurrentDocument()));
+    //connect(encodingAction, SIGNAL(triggered()), this, SLOT(focusEncodingComboBox()));
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
@@ -119,6 +123,13 @@ void MainWindow::createMenuBar() {
     file->addAction(open);
     file->addAction(save);
     file->addAction(saveAs);
+
+    file->addSeparator();
+
+    file->addAction(encodingAction);
+
+    file->addSeparator();
+
     file->addAction(printPage);
 
     file->addSeparator();
@@ -166,6 +177,10 @@ void MainWindow::createContextMenu() {
     this->addAction(save);
     this->addAction(saveAs);
     this->addAction(closeTab);
+
+    this->addAction(seperator);
+
+    this->addAction(encodingAction);
 
     this->addAction(seperator);
 

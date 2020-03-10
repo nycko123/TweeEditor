@@ -74,6 +74,7 @@ private slots:
     void saveSelectedDocument(int index = -1);   // only use when close the other tab
     void closeSelectedDocument(int index = -1);
 
+//   void focusEncodingComboBox();
     void
     printCurrentDocument(); // connects to the printer and print current page                                                                                       // closes current tab
 
@@ -110,6 +111,7 @@ private:
     QAction *open{};
     QAction *save{};
     QAction *saveAs{};
+    QAction *encodingAction{};
     QAction *printPage{};
     QAction *closeTab{};
     QAction *exitApp{};

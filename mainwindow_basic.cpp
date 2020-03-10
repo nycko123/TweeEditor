@@ -16,7 +16,7 @@ void MainWindow::setEnableWidgets(bool isEnabled) {
     save->setEnabled(isEnabled);
     saveAs->setEnabled(isEnabled);
     closeTab->setEnabled(isEnabled);
-    //encodingAction->setEnabled(isEnabled);
+    encodingAction->setEnabled(isEnabled);
     printPage->setEnabled(isEnabled);
 
     addTime->setEnabled(isEnabled);
