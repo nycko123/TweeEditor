@@ -1,0 +1,3 @@
+C:\Users\TweeChalice\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\TweeEdit.dir/objects.a
+D:\Qt5.14.1\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\TweeEdit.dir/objects.a @CMakeFiles\TweeEdit.dir\objects1.rsp
+D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\TweeEdit.dir/objects.a -Wl,--no-whole-archive  -o TweeEdit.exe -Wl,--out-implib,libTweeEdit.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TweeEdit.dir\linklibs.rsp
