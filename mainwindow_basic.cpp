@@ -8,7 +8,7 @@ void MainWindow::getCurrentPage() {
     qDebug() << "currentText: " << currentText << "\n";
 
     // updates encoding-selecting combo-box
-    if (currentText >= 0)
+    if (totalText)
         selectTextCode->setCurrentText(document[currentText].textCode->name());
 }
 
