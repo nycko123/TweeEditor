@@ -1,7 +1,5 @@
-cmake-build-debug/cmake_install.cmake
 cmake-build-debug/TweeEdit.cbp
 cmake-build-debug/TweeEdit.exe
-cmake-build-debug/TweeEdit_autogen/
 cmake-build-debug/CMakeFiles/TweeEdit.dir/CXX.includecache
 cmake-build-debug/CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj
 cmake-build-debug/CMakeFiles/TweeEdit.dir/objects.a

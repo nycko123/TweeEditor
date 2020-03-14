@@ -37,7 +37,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr, const QString &languageDisplayed = EN_US);
 
     ~MainWindow() override = default;
 
@@ -144,6 +144,7 @@ private:
 
     // for the statu-bar
     QComboBox *selectTextCode{};
+
 };
 
 #endif // MAINWINDOW_H

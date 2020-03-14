@@ -4,100 +4,115 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="21"/>
+        <location filename="mainwindow_oncreate.cpp" line="24"/>
         <source>New</source>
         <translation>Nowy</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="22"/>
+        <location filename="mainwindow_oncreate.cpp" line="25"/>
         <source>Open</source>
         <translation>Otwórz</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="23"/>
+        <location filename="mainwindow_oncreate.cpp" line="26"/>
         <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="24"/>
+        <location filename="mainwindow_oncreate.cpp" line="27"/>
         <source>Save As</source>
         <translation>Zapisz jako</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="25"/>
+        <location filename="mainwindow_oncreate.cpp" line="28"/>
+        <source>Select encodings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_oncreate.cpp" line="29"/>
         <source>Print</source>
         <translation>Drukuj</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="26"/>
+        <location filename="mainwindow_oncreate.cpp" line="30"/>
         <source>Close</source>
         <translation>Zamknij</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="27"/>
+        <location filename="mainwindow_oncreate.cpp" line="31"/>
         <source>Exit</source>
         <translation>Wyjdź</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="29"/>
+        <location filename="mainwindow_oncreate.cpp" line="33"/>
         <source>Add time</source>
         <translation>Dodaj czas</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="30"/>
+        <location filename="mainwindow_oncreate.cpp" line="34"/>
         <source>Add file name</source>
         <translation>Dodaj nazwę pliku</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="31"/>
+        <location filename="mainwindow_oncreate.cpp" line="35"/>
         <source>Font</source>
         <translation>Czcionka</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="32"/>
+        <location filename="mainwindow_oncreate.cpp" line="36"/>
         <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="33"/>
+        <location filename="mainwindow_oncreate.cpp" line="37"/>
         <source>Find</source>
         <translation>Znajdź</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="35"/>
-        <location filename="mainwindow_slots_help.cpp" line="7"/>
+        <location filename="mainwindow_oncreate.cpp" line="39"/>
+        <location filename="mainwindow_slots_help.cpp" line="6"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="36"/>
-        <location filename="mainwindow_oncreate.cpp" line="65"/>
-        <location filename="mainwindow_slots_help.cpp" line="16"/>
+        <location filename="mainwindow_oncreate.cpp" line="40"/>
+        <location filename="mainwindow_oncreate.cpp" line="71"/>
+        <location filename="mainwindow_slots_help.cpp" line="14"/>
         <source>About TweeEditor</source>
         <translation>O TweeEditor</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="42"/>
+        <location filename="mainwindow_oncreate.cpp" line="46"/>
+        <source>Ctrl+E</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_oncreate.cpp" line="47"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="43"/>
+        <location filename="mainwindow_oncreate.cpp" line="48"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="45"/>
+        <location filename="mainwindow_oncreate.cpp" line="50"/>
         <source>F2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="46"/>
+        <location filename="mainwindow_oncreate.cpp" line="51"/>
         <source>Alt+F2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="64"/>
+        <location filename="mainwindow_oncreate.cpp" line="58"/>
+        <source>Select the current encodings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_oncreate.cpp" line="70"/>
         <source>The information about Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -110,57 +125,57 @@
         <translation type="vanished">Alt+N</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="49"/>
+        <location filename="mainwindow_oncreate.cpp" line="54"/>
         <source>Create a new text</source>
         <translation>Utwórz nowy tekst</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="50"/>
+        <location filename="mainwindow_oncreate.cpp" line="55"/>
         <source>Save the current file</source>
         <translation>Zapisz bieżący plik</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="51"/>
+        <location filename="mainwindow_oncreate.cpp" line="56"/>
         <source>Save a document as another file</source>
         <translation>Zapisz dokument jako inny plik</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="52"/>
+        <location filename="mainwindow_oncreate.cpp" line="57"/>
         <source>Open a text file</source>
         <translation>Otwórz plik tekstowy</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="53"/>
+        <location filename="mainwindow_oncreate.cpp" line="59"/>
         <source>Print current document</source>
         <translation>Wydrukuj dokument</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="54"/>
+        <location filename="mainwindow_oncreate.cpp" line="60"/>
         <source>Close current tab</source>
         <translation>Zapisz bieżącą zakładkę</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="56"/>
+        <location filename="mainwindow_oncreate.cpp" line="62"/>
         <source>Adds the current time to the current page</source>
         <translation>Dodaj bieżący czas do tej strony</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="57"/>
+        <location filename="mainwindow_oncreate.cpp" line="63"/>
         <source>Adds the current file name to the current page</source>
         <translation>Dodaj nazwę dokumentu do tej strony</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="58"/>
+        <location filename="mainwindow_oncreate.cpp" line="64"/>
         <source>Sets the global text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="59"/>
+        <location filename="mainwindow_oncreate.cpp" line="65"/>
         <source>Sets the displaying of the language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="60"/>
+        <location filename="mainwindow_oncreate.cpp" line="66"/>
         <source>Find the text</source>
         <translation>Wyszukaj tekst</translation>
     </message>
@@ -169,52 +184,47 @@
         <translation type="vanished">Informacja o Qt</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="105"/>
+        <location filename="mainwindow_oncreate.cpp" line="110"/>
         <source>&lt;i&gt;Ready&lt;/i&gt;</source>
         <translation>&lt;i&gt;Gotowe&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="116"/>
+        <location filename="mainwindow_oncreate.cpp" line="120"/>
         <source>&amp;File</source>
         <translation>&amp;Plik</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="133"/>
+        <location filename="mainwindow_oncreate.cpp" line="144"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edytuj</translation>
     </message>
     <message>
-        <location filename="mainwindow_oncreate.cpp" line="148"/>
+        <location filename="mainwindow_oncreate.cpp" line="159"/>
         <source>&amp;Help</source>
         <translation>P&amp;omoc</translation>
     </message>
     <message>
-        <location filename="mainwindow_basic.cpp" line="36"/>
-        <source>Attention!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow_basic.cpp" line="37"/>
-        <source>Save these documents before translating to &lt;b&gt;%1?&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow_basic.cpp" line="59"/>
+        <location filename="mainwindow_basic.cpp" line="54"/>
         <source>Error converting this document!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_basic.cpp" line="61"/>
+        <location filename="mainwindow_basic.cpp" line="56"/>
         <source>Some chars that can&apos;t convert remaining in this document!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_basic.cpp" line="69"/>
+        <location filename="mainwindow_basic.cpp" line="64"/>
         <source>Oops!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_basic.cpp" line="67"/>
+        <location filename="mainwindow_basic.cpp" line="69"/>
+        <source>Translating successfully, please save this document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow_basic.cpp" line="62"/>
         <location filename="mainwindow_slots_file.cpp" line="49"/>
         <location filename="mainwindow_slots_file.cpp" line="89"/>
         <location filename="mainwindow_slots_file.cpp" line="150"/>
@@ -313,82 +323,94 @@ Are you sure you want to exit?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_edit.cpp" line="21"/>
+        <location filename="mainwindow_slots_edit.cpp" line="18"/>
         <source>Select the font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_edit.cpp" line="53"/>
-        <source>You&apos;ve changed the displaying of TweeEditor</source>
+        <location filename="mainwindow_slots_edit.cpp" line="48"/>
+        <source>Attention</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow_slots_edit.cpp" line="54"/>
-        <source>It needs &lt;b&gt;restart&lt;/b&gt;. 
-Now?</source>
+        <location filename="mainwindow_slots_edit.cpp" line="49"/>
+        <source>Your language will be changed after restarting TweeEditor</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="main.cpp" line="37"/>
+        <source>Error collecting data!</source>
+        <translation type="unfinished">Błąd w przygotowaniu danych!</translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="38"/>
+        <source>Loading translation failed!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TweeFindDialog</name>
     <message>
-        <location filename="FindDialog.cpp" line="18"/>
+        <location filename="FindDialog.cpp" line="17"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="19"/>
-        <location filename="FindDialog.cpp" line="71"/>
+        <location filename="FindDialog.cpp" line="18"/>
+        <location filename="FindDialog.cpp" line="70"/>
         <source>Find</source>
         <translation>Znajdź</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="21"/>
+        <location filename="FindDialog.cpp" line="20"/>
         <source>&amp;Find the whole word</source>
         <translation>&amp;Wyszukaj słowo</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="22"/>
+        <location filename="FindDialog.cpp" line="21"/>
         <source>&amp;Default option</source>
         <translation>&amp;Domyślne ustawienia</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="23"/>
+        <location filename="FindDialog.cpp" line="22"/>
         <source>&amp;Find backward from your cursor position</source>
         <translation>&amp;Szukaj wstecz od pozycji kursora</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="24"/>
+        <location filename="FindDialog.cpp" line="23"/>
         <source>&amp;Find word incasesensitively</source>
         <translation>Szukaj ignorując wielkość liter</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="25"/>
+        <location filename="FindDialog.cpp" line="24"/>
         <source>&amp;Find word casesensitively</source>
         <translation>Szukaj rozróżniając wielkość liter</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="28"/>
+        <location filename="FindDialog.cpp" line="27"/>
         <source>Find options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="36"/>
+        <location filename="FindDialog.cpp" line="35"/>
         <source>Expanded finding options</source>
         <translation>Rozszerzone opcje wyszukiwania</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="47"/>
+        <location filename="FindDialog.cpp" line="46"/>
         <source>Find the word</source>
         <translation>Szukaj słowa</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="81"/>
+        <location filename="FindDialog.cpp" line="79"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
     <message>
-        <location filename="FindDialog.cpp" line="82"/>
+        <location filename="FindDialog.cpp" line="80"/>
         <source>There&apos;s no string named &lt;b&gt;%1&lt;/b&gt;</source>
         <translation>Nie znaleziono ciągu &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>

@@ -39,13 +39,14 @@ void MainWindow::selectLanguage() {
     languageDialog = new TweeLanguageDialog(selectedLanguage, this);
 
     if (languageDialog->exec() == QDialog::Accepted) {
-        selectedLanguage = languageDialog->selectedLanguage();
-        qDebug() << "Selected language: " << selectedLanguage << "\n";
+        QString language=languageDialog->selectedLanguage();
 
-        int res = QMessageBox::information(this, tr("You\'ve changed the displaying of TweeEditor"),
-                                           tr("It needs <b>restart</b>. \nNow?"),
-                                           QMessageBox::Yes | QMessageBox::No);
-        if (res == QMessageBox::Yes)
-            this->close();
+        qDebug() << "Selected language: " << language << "\n";
+
+        selectedLanguage=language;
+
+        QMessageBox::information(this,tr("Attention"),
+                tr("Your language will be changed after restarting TweeEditor"),
+                QMessageBox::Ok);
     }
 }

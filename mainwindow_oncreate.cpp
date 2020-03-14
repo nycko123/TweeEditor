@@ -6,7 +6,10 @@
 
 // on create the window
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+MainWindow::MainWindow(QWidget *parent, const QString &languageDisplayed) : QMainWindow(parent) {
+    this->selectedLanguage = languageDisplayed;
+
+
     readSettingsFromSystem();
     setEncodings();
     createActions();
