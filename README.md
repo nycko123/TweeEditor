@@ -20,7 +20,7 @@
  TweeChalice and Linhk are students and make this application together. This application is simple, so we hope that someone can give me some advise on changing better.
  
 
- If you have some problems to let us know, please write your problems in 'Issues'.
+ If you have some problems to let us know, please write your problems in `Issues`.
   
 ## Thanks
 
