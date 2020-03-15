@@ -8,6 +8,7 @@
 #include <utility>
 #include "FindDialog.h"
 #include "TweeLanguageDialog.h"
+#include "TweeBugReportDialog.h"
 
 // the information and the widget of the text document
 struct Document {
@@ -64,7 +65,7 @@ private slots:
     // common 'file' slots
     void newDocument(const QByteArray &text = "", const QString &title = "untitled.txt", const QString &textPath = "");
 
-    void openDocument();   // opens a text documnet
+    void openDocument();   // opens a text document
     void saveDocument();   // saves the text document
     void saveAsDocument(); // the dialog of 'Save As'
     void closeDocument();
@@ -89,7 +90,14 @@ private slots:
 
     void selectLanguage();
 
+    // 'view' slots
+    void zoomIn();
+
+    void zoomOut();
+
     // 'help' slots
+    void reportBugs();
+
     void aboutQt();
 
     void aboutThisApp();
@@ -111,7 +119,6 @@ private:
     QAction *open{};
     QAction *save{};
     QAction *saveAs{};
-    QAction *encodingAction{};
     QAction *printPage{};
     QAction *closeTab{};
     QAction *exitApp{};
@@ -123,13 +130,22 @@ private:
     QAction *font{};
     QAction *displayLanguage{};
 
+    // 'view' options
+    QAction *zoom{};
+    QAction *zoomPlus{};
+    QAction *zoomMinus{};
+
     // 'help' actions
+    QAction *bugReport{};
     QAction *aboutQtAction{};
     QAction *aboutThisAppAction{};
 
     // 'edit' dialogs
     TweeFindDialog *findDialog{};
     TweeLanguageDialog *languageDialog{};
+
+    // 'help' dialog
+    TweeBugReportDialog *bugReportDialog{};
 
     int currentText = 0;
     int countText = 0;
@@ -144,6 +160,9 @@ private:
 
     // for the statu-bar
     QComboBox *selectTextCode{};
+
+    // controls the zoom
+    int zoomFactor = 1;
 
 };
 

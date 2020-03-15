@@ -16,12 +16,13 @@ void MainWindow::setEnableWidgets(bool isEnabled) {
     save->setEnabled(isEnabled);
     saveAs->setEnabled(isEnabled);
     closeTab->setEnabled(isEnabled);
-    encodingAction->setEnabled(isEnabled);
     printPage->setEnabled(isEnabled);
 
     addTime->setEnabled(isEnabled);
     addFileName->setEnabled(isEnabled);
     findText->setEnabled(isEnabled);
+
+    zoom->setEnabled(isEnabled);
 
     selectTextCode->setEnabled(isEnabled);
 }

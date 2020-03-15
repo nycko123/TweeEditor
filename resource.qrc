@@ -20,9 +20,14 @@
         <file>ico/font.png</file>
         <file>ico/closeTab.png</file>
         <file>ico/addTime.png</file>
+        <file>ico/zoom-factors.jpg</file>
+        <file>ico/zoom+.jpg</file>
+        <file>ico/zoom-.jpg</file>
         <file>ico/TweeEditor-introduction-ico.png</file>
+        <file>ico/bug.jpg</file>
+        <file>ico/github.jpg</file>
         <file>ico/selectLanguage.jpg</file>
-        <file>TweeSimpleEdit_zh_CN.qm</file>
-        <file>TweeSimpleEdit_pl_PL.qm</file>
+        <file>translations/TweeSimpleEdit_zh_CN.qm</file>
+        <file>translations/TweeSimpleEdit_pl_PL.qm</file>
     </qresource>
 </RCC>

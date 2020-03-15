@@ -16,21 +16,21 @@ find_package(Qt5Gui)
 find_package(Qt5LinguistTools)
 find_package(Qt5PrintSupport)
 
-set(TRANSLATE_FILES TweeSimpleEdit_pl_PL.ts TweeSimpleEdit_zh_CN.ts)
+set(TRANSLATE_FILES  translations/TweeSimpleEdit_pl_PL.ts translations/TweeSimpleEdit_zh_CN.ts)
 
 qt5_create_translation(QM_FILES ${TRANSLATE_FILES})
 qt5_add_translation(QM_FILES ${TRANSLATE_FILES})
 
 set(RESOURCE_FILES resource.qrc)
 
-set(DIALOG_HEADERS FindDialog.h TweeFirstUseDialog.h TweeLanguageDialog.h)
-set(DIALOG_SOURCES FindDialog.cpp TweeFirstUseDialog.cpp TweeLanguageDialog.cpp)
+set(DIALOG_HEADERS FindDialog.h TweeFirstUseDialog.h TweeLanguageDialog.h TweeBugReportDialog.h)
+set(DIALOG_SOURCES FindDialog.cpp TweeFirstUseDialog.cpp TweeLanguageDialog.cpp TweeBugReportDialog.cpp)
 
 set(MAINWINDOW_HEADERS mainwindow.h)
 set(MAINWINDOW_SOURCES
         mainwindow_slots_help.cpp mainwindow_slots_file.cpp mainwindow_slots_edit.cpp
         mainwindow_oncreate.cpp mainwindow_events.cpp mainwindow_basic.cpp
-        )
+        mainwindow_slots_view.cpp)
 
 add_executable(TweeEdit main.cpp
           ${RESOURCE_FILES} ${DIALOG_HEADERS} ${DIALOG_SOURCES}

@@ -3,12 +3,12 @@
 #include "mainwindow.h"
 
 void MainWindow::addTimetoEdit() {
-    QTime currentTime = QTime::currentTime();
-    document[currentText].textEdit->appendPlainText(currentTime.toString());
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    document[currentText].textEdit->insertPlainText(currentDateTime.toString());
 }
 
 void MainWindow::addFileNametoEdit() {
-    document[currentText].textEdit->appendPlainText(tabWidget->tabText(currentText));
+    document[currentText].textEdit->insertPlainText(tabWidget->tabText(currentText));
 }
 
 void MainWindow::fontSelect() {
@@ -30,23 +30,25 @@ void MainWindow::fontSelect() {
 }
 
 void MainWindow::findTextDialog() {
-    findDialog = new TweeFindDialog(document[currentText].textEdit, this);
-    findDialog->setModal(true);
+    if(!findDialog)
+        findDialog = new TweeFindDialog(document[currentText].textEdit, this);
+
     findDialog->show();
+    findDialog->raise();
 }
 
 void MainWindow::selectLanguage() {
     languageDialog = new TweeLanguageDialog(selectedLanguage, this);
 
     if (languageDialog->exec() == QDialog::Accepted) {
-        QString language=languageDialog->selectedLanguage();
+        QString language = languageDialog->selectedLanguage();
 
         qDebug() << "Selected language: " << language << "\n";
 
-        selectedLanguage=language;
+        selectedLanguage = language;
 
-        QMessageBox::information(this,tr("Attention"),
-                tr("Your language will be changed after restarting TweeEditor"),
-                QMessageBox::Ok);
+        QMessageBox::information(this, tr("Attention"),
+                                 tr("Your language will be changed after restarting TweeEditor"),
+                                 QMessageBox::Ok);
     }
 }

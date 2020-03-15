@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[24];
-    char stringdata0[317];
+    QByteArrayData data[27];
+    char stringdata0[343];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -54,8 +54,11 @@ QT_MOC_LITERAL(18, 237, 17), // "addFileNametoEdit"
 QT_MOC_LITERAL(19, 255, 10), // "fontSelect"
 QT_MOC_LITERAL(20, 266, 14), // "findTextDialog"
 QT_MOC_LITERAL(21, 281, 14), // "selectLanguage"
-QT_MOC_LITERAL(22, 296, 7), // "aboutQt"
-QT_MOC_LITERAL(23, 304, 12) // "aboutThisApp"
+QT_MOC_LITERAL(22, 296, 6), // "zoomIn"
+QT_MOC_LITERAL(23, 303, 7), // "zoomOut"
+QT_MOC_LITERAL(24, 311, 10), // "reportBugs"
+QT_MOC_LITERAL(25, 322, 7), // "aboutQt"
+QT_MOC_LITERAL(26, 330, 12) // "aboutThisApp"
 
     },
     "MainWindow\0getCurrentPage\0\0setTextEncoding\0"
@@ -66,7 +69,8 @@ QT_MOC_LITERAL(23, 304, 12) // "aboutThisApp"
     "closeSelectedDocument\0printCurrentDocument\0"
     "addTimetoEdit\0addFileNametoEdit\0"
     "fontSelect\0findTextDialog\0selectLanguage\0"
-    "aboutQt\0aboutThisApp"
+    "zoomIn\0zoomOut\0reportBugs\0aboutQt\0"
+    "aboutThisApp"
 };
 #undef QT_MOC_LITERAL
 
@@ -76,7 +80,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      27,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -84,30 +88,33 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  134,    2, 0x08 /* Private */,
-       3,    1,  135,    2, 0x08 /* Private */,
-       4,    3,  138,    2, 0x08 /* Private */,
-       4,    2,  145,    2, 0x28 /* Private | MethodCloned */,
-       4,    1,  150,    2, 0x28 /* Private | MethodCloned */,
-       4,    0,  153,    2, 0x28 /* Private | MethodCloned */,
-       8,    0,  154,    2, 0x08 /* Private */,
-       9,    0,  155,    2, 0x08 /* Private */,
-      10,    0,  156,    2, 0x08 /* Private */,
-      11,    0,  157,    2, 0x08 /* Private */,
-      12,    1,  158,    2, 0x08 /* Private */,
-      12,    0,  161,    2, 0x28 /* Private | MethodCloned */,
-      14,    1,  162,    2, 0x08 /* Private */,
-      14,    0,  165,    2, 0x28 /* Private | MethodCloned */,
-      15,    1,  166,    2, 0x08 /* Private */,
-      15,    0,  169,    2, 0x28 /* Private | MethodCloned */,
-      16,    0,  170,    2, 0x08 /* Private */,
-      17,    0,  171,    2, 0x08 /* Private */,
-      18,    0,  172,    2, 0x08 /* Private */,
-      19,    0,  173,    2, 0x08 /* Private */,
-      20,    0,  174,    2, 0x08 /* Private */,
-      21,    0,  175,    2, 0x08 /* Private */,
-      22,    0,  176,    2, 0x08 /* Private */,
-      23,    0,  177,    2, 0x08 /* Private */,
+       1,    0,  149,    2, 0x08 /* Private */,
+       3,    1,  150,    2, 0x08 /* Private */,
+       4,    3,  153,    2, 0x08 /* Private */,
+       4,    2,  160,    2, 0x28 /* Private | MethodCloned */,
+       4,    1,  165,    2, 0x28 /* Private | MethodCloned */,
+       4,    0,  168,    2, 0x28 /* Private | MethodCloned */,
+       8,    0,  169,    2, 0x08 /* Private */,
+       9,    0,  170,    2, 0x08 /* Private */,
+      10,    0,  171,    2, 0x08 /* Private */,
+      11,    0,  172,    2, 0x08 /* Private */,
+      12,    1,  173,    2, 0x08 /* Private */,
+      12,    0,  176,    2, 0x28 /* Private | MethodCloned */,
+      14,    1,  177,    2, 0x08 /* Private */,
+      14,    0,  180,    2, 0x28 /* Private | MethodCloned */,
+      15,    1,  181,    2, 0x08 /* Private */,
+      15,    0,  184,    2, 0x28 /* Private | MethodCloned */,
+      16,    0,  185,    2, 0x08 /* Private */,
+      17,    0,  186,    2, 0x08 /* Private */,
+      18,    0,  187,    2, 0x08 /* Private */,
+      19,    0,  188,    2, 0x08 /* Private */,
+      20,    0,  189,    2, 0x08 /* Private */,
+      21,    0,  190,    2, 0x08 /* Private */,
+      22,    0,  191,    2, 0x08 /* Private */,
+      23,    0,  192,    2, 0x08 /* Private */,
+      24,    0,  193,    2, 0x08 /* Private */,
+      25,    0,  194,    2, 0x08 /* Private */,
+      26,    0,  195,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -125,6 +132,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::Int,   13,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   13,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -166,8 +176,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 19: _t->fontSelect(); break;
         case 20: _t->findTextDialog(); break;
         case 21: _t->selectLanguage(); break;
-        case 22: _t->aboutQt(); break;
-        case 23: _t->aboutThisApp(); break;
+        case 22: _t->zoomIn(); break;
+        case 23: _t->zoomOut(); break;
+        case 24: _t->reportBugs(); break;
+        case 25: _t->aboutQt(); break;
+        case 26: _t->aboutThisApp(); break;
         default: ;
         }
     }
@@ -202,13 +215,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 27;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 27)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 24;
+        _id -= 27;
     }
     return _id;
 }

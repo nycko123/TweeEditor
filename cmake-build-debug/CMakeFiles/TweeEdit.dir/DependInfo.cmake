@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/FindDialog.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/FindDialog.cpp.obj"
+  "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/TweeBugReportDialog.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj"
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj"
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/TweeEdit_autogen/mocs_compilation.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/TweeEdit_autogen/mocs_compilation.cpp.obj"
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/TweeFirstUseDialog.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/TweeFirstUseDialog.cpp.obj"
@@ -16,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/mainwindow_slots_edit.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj"
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/mainwindow_slots_file.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj"
   "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/mainwindow_slots_help.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj"
+  "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/mainwindow_slots_view.cpp" "D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

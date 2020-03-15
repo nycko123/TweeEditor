@@ -23,21 +23,24 @@ SOURCES += \
     mainwindow_basic.cpp\
     mainwindow_slots_edit.cpp\
     mainwindow_slots_file.cpp\
+    mainwindow_slots_view.cpp\
     mainwindow_slots_help.cpp\
     mainwindow_events.cpp\
-    FindDialog.cpp
+    FindDialog.cpp\
+    TweeBugReportDialog.cpp
 
 HEADERS += \
     TweeFirstUseDialog.h \
     TweeLanguageDialog.h \
     mainwindow.h\
-    FindDialog.h
+    FindDialog.h\
+    TweeBugReportDialog.h
 
 RESOURCES += resource.qrc
 
 TRANSLATIONS += \
-    TweeSimpleEdit_zh_CN.ts\
-    TweeSimpleEdit_pl_PL.ts
+    translations/TweeSimpleEdit_zh_CN.ts\
+    translations/TweeSimpleEdit_pl_PL.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -30,25 +30,32 @@ private slots:
     void findBack();        // presses the 'findBackward' radio button
     void findCase();        // presses the 'findCase...' radio button
 
+    void setRegular();      // presses the 'findRegular...' radio button
+
 public:
-    TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent = nullptr);
+    explicit TweeFindDialog(QPlainTextEdit *textEdit, QWidget *parent = nullptr);
 
 private:
-    QLineEdit *findText;
-    QPushButton *cancel;
-    QPushButton *ok;
-    QPlainTextEdit *currentTextEdit;
-    QWidget *parent;
+    QLineEdit *findText{};
+    QPushButton *cancel{};
+    QPushButton *ok{};
+    QPlainTextEdit *currentTextEdit{};
+    QWidget *parent{};
 
     // the way to find the word
-    QRadioButton *findWholeWord;
-    QRadioButton *findForward;
-    QRadioButton *findBackward;
+    QRadioButton *findWholeWord{};
+    QRadioButton *findForward{};
+    QRadioButton *findBackward{};
 
-    QRadioButton *findIncaseSensitively;
-    QRadioButton *findCaseSensitively;
+    // extra finding options
+    QRadioButton *findIncaseSensitively{};
+    QRadioButton *findCaseSensitively{};
+
+    // special finding options
+    QRadioButton *findRegularExpression{};
 
     QTextDocument::FindFlags findWay = FIND_INCASESENTIVILY;
+    bool bFindRegular = false;
 };
 
 #endif

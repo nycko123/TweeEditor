@@ -60,8 +60,6 @@ TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../resource.qrc
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: CMakeFiles/TweeEdit_autogen.dir/RCCresourceInfo.cmake
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../LICENSE
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../README.md
-TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../TweeSimpleEdit_pl_PL.qm
-TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../TweeSimpleEdit_zh_CN.qm
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/open.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/font.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/paste.png
@@ -71,6 +69,7 @@ TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/find.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/TweeEditor-introduction-ico.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/printer.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/encoding.jpg
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/bug.jpg
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/document.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/selectLanguage.jpg
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/closeTab.png
@@ -78,10 +77,16 @@ TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/exit.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/icon.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/file.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/TweeEditor.jpg
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/zoom+.jpg
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/github.jpg
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/zoom-.jpg
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/addTime.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/save.png
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/zoom-factors.jpg
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/cut.png
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../ico/new.png
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../translations/TweeSimpleEdit_pl_PL.qm
+TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: ../translations/TweeSimpleEdit_zh_CN.qm
 TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp: D:/Qt5.14.1/5.14.1/mingw73_64/bin/rcc.exe
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for resource.qrc"
 	C:\Users\TweeChalice\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -E cmake_autorcc D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit_autogen.dir/RCCresourceInfo.cmake Debug
@@ -156,10 +161,24 @@ CMakeFiles/TweeEdit.dir/TweeLanguageDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TweeEdit.dir/TweeLanguageDialog.cpp.s"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\TweeLanguageDialog.cpp -o CMakeFiles\TweeEdit.dir\TweeLanguageDialog.cpp.s
 
+CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
+CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
+CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj: ../TweeBugReportDialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\TweeBugReportDialog.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\TweeBugReportDialog.cpp
+
+CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.i"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\TweeBugReportDialog.cpp > CMakeFiles\TweeEdit.dir\TweeBugReportDialog.cpp.i
+
+CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.s"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\TweeBugReportDialog.cpp -o CMakeFiles\TweeEdit.dir\TweeBugReportDialog.cpp.s
+
 CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj: ../mainwindow_slots_help.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_slots_help.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_help.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.i: cmake_force
@@ -173,7 +192,7 @@ CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.s: cmake_force
 CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj: ../mainwindow_slots_file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_slots_file.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_file.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.i: cmake_force
@@ -187,7 +206,7 @@ CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.s: cmake_force
 CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj: ../mainwindow_slots_edit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_slots_edit.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_edit.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.i: cmake_force
@@ -201,7 +220,7 @@ CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.s: cmake_force
 CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj: ../mainwindow_oncreate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_oncreate.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_oncreate.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.i: cmake_force
@@ -215,7 +234,7 @@ CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.s: cmake_force
 CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj: ../mainwindow_events.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_events.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_events.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.i: cmake_force
@@ -229,7 +248,7 @@ CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.s: cmake_force
 CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj: ../mainwindow_basic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_basic.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_basic.cpp
 
 CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.i: cmake_force
@@ -240,10 +259,24 @@ CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.s"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_basic.cpp -o CMakeFiles\TweeEdit.dir\mainwindow_basic.cpp.s
 
+CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
+CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
+CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj: ../mainwindow_slots_view.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\mainwindow_slots_view.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_view.cpp
+
+CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.i"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_view.cpp > CMakeFiles\TweeEdit.dir\mainwindow_slots_view.cpp.i
+
+CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.s"
+	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\mainwindow_slots_view.cpp -o CMakeFiles\TweeEdit.dir\mainwindow_slots_view.cpp.s
+
 CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj: CMakeFiles/TweeEdit.dir/flags.make
 CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj: CMakeFiles/TweeEdit.dir/includes_CXX.rsp
 CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj: TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj"
 	D:\Qt5.14.1\Tools\mingw730_64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TweeEdit.dir\TweeEdit_autogen\EWIEGA46WW\qrc_resource.cpp.obj -c D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\TweeEdit_autogen\EWIEGA46WW\qrc_resource.cpp
 
 CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.i: cmake_force
@@ -261,12 +294,14 @@ TweeEdit_OBJECTS = \
 "CMakeFiles/TweeEdit.dir/FindDialog.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/TweeFirstUseDialog.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/TweeLanguageDialog.cpp.obj" \
+"CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj" \
+"CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj" \
 "CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj"
 
 # External object files for target TweeEdit
@@ -277,12 +312,14 @@ TweeEdit.exe: CMakeFiles/TweeEdit.dir/main.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/FindDialog.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/TweeFirstUseDialog.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/TweeLanguageDialog.cpp.obj
+TweeEdit.exe: CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_oncreate.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_events.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_basic.cpp.obj
+TweeEdit.exe: CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/build.make
 TweeEdit.exe: D:/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5PrintSupport.a
@@ -292,7 +329,7 @@ TweeEdit.exe: D:/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Core.a
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/linklibs.rsp
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/objects1.rsp
 TweeEdit.exe: CMakeFiles/TweeEdit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable TweeEdit.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable TweeEdit.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TweeEdit.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

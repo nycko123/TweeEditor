@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TweeEdit.dir/FindDialog.cpp.obj"
+  "CMakeFiles/TweeEdit.dir/TweeBugReportDialog.cpp.obj"
   "CMakeFiles/TweeEdit.dir/TweeEdit_autogen/EWIEGA46WW/qrc_resource.cpp.obj"
   "CMakeFiles/TweeEdit.dir/TweeEdit_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/TweeEdit.dir/TweeFirstUseDialog.cpp.obj"
@@ -11,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/TweeEdit.dir/mainwindow_slots_edit.cpp.obj"
   "CMakeFiles/TweeEdit.dir/mainwindow_slots_file.cpp.obj"
   "CMakeFiles/TweeEdit.dir/mainwindow_slots_help.cpp.obj"
+  "CMakeFiles/TweeEdit.dir/mainwindow_slots_view.cpp.obj"
   "CMakeFiles/TweeEdit_autogen.dir/AutogenOldSettings.txt"
   "CMakeFiles/TweeEdit_autogen.dir/ParseCache.txt"
   "TweeEdit_autogen"

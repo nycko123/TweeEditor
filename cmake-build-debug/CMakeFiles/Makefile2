@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/TweeEdit.dir/all: CMakeFiles/TweeEdit_autogen.dir/all
 	$(MAKE) -f CMakeFiles\TweeEdit.dir\build.make CMakeFiles/TweeEdit.dir/depend
 	$(MAKE) -f CMakeFiles\TweeEdit.dir\build.make CMakeFiles/TweeEdit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target TweeEdit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target TweeEdit"
 .PHONY : CMakeFiles/TweeEdit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TweeEdit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles 17
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/TweeEdit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/TweeEdit.dir/rule
@@ -101,7 +101,7 @@ CMakeFiles/TweeEdit.dir/clean:
 CMakeFiles/TweeEdit_autogen.dir/all:
 	$(MAKE) -f CMakeFiles\TweeEdit_autogen.dir\build.make CMakeFiles/TweeEdit_autogen.dir/depend
 	$(MAKE) -f CMakeFiles\TweeEdit_autogen.dir\build.make CMakeFiles/TweeEdit_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=15 "Built target TweeEdit_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit\cmake-build-debug\CMakeFiles --progress-num=17 "Built target TweeEdit_autogen"
 .PHONY : CMakeFiles/TweeEdit_autogen.dir/all
 
 # Build rule for subdir invocation for target.

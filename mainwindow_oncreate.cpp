@@ -25,7 +25,6 @@ void MainWindow::createActions() {
     open = new QAction(QIcon(":/ico/open.png"), tr("Open"));
     save = new QAction(QIcon(":/ico/save.png"), tr("Save"));
     saveAs = new QAction(QIcon(":/ico/save.png"), tr("Save As"));
-    encodingAction = new QAction(QIcon(":/ico/encoding.jpg"), tr("Select encodings"));
     printPage = new QAction(QIcon(":/ico/printer.png"), tr("Print"));
     closeTab = new QAction(QIcon(":/ico/closeTab.png"), tr("Close"));
     exitApp = new QAction(QIcon(":/ico/exit.png"), tr("Exit"));
@@ -36,6 +35,9 @@ void MainWindow::createActions() {
     displayLanguage = new QAction(QIcon(":/ico/selectLanguage.jpg"), tr("Language"));
     findText = new QAction(QIcon(":/ico/find.png"), tr("Find"));
 
+    zoom = new QAction(QIcon(":/ico/zoom-factors.jpg"), tr("Zoom"));
+
+    bugReport = new QAction(QIcon(":/ico/bug.jpg"), tr("Bug report"));
     aboutQtAction = new QAction(QIcon(":/ico/Qt.jpg"), tr("About Qt"));
     aboutThisAppAction = new QAction(QIcon(":/ico/TweeEditor.jpg"), tr("About TweeEditor"));
 
@@ -43,7 +45,6 @@ void MainWindow::createActions() {
     open->setShortcut(QKeySequence::Open);
     save->setShortcut(QKeySequence::Save);
     saveAs->setShortcut(QKeySequence::SaveAs);
-    encodingAction->setShortcut(tr("Ctrl+E"));
     closeTab->setShortcut(tr("Ctrl+W"));
     exitApp->setShortcut(tr("Ctrl+Q"));
 
@@ -55,7 +56,6 @@ void MainWindow::createActions() {
     save->setStatusTip(tr("Save the current file"));
     saveAs->setStatusTip(tr("Save a document as another file"));
     open->setStatusTip(tr("Open a text file"));
-    encodingAction->setStatusTip(tr("Select the current encodings"));
     printPage->setStatusTip(tr("Print current document"));
     closeTab->setStatusTip(tr("Close current tab"));
 
@@ -67,6 +67,9 @@ void MainWindow::createActions() {
 
     setEnableWidgets(false);
 
+    zoom->setStatusTip(tr("Zooms the current document"));
+
+    bugReport->setStatusTip(tr("Report a bug"));
     aboutQtAction->setStatusTip(tr("The information about Qt"));
     aboutThisAppAction->setStatusTip(tr("About TweeEditor"));
 
@@ -76,7 +79,6 @@ void MainWindow::createActions() {
     connect(save, SIGNAL(triggered()), this, SLOT(saveDocument()));
     connect(saveAs, SIGNAL(triggered()), this, SLOT(saveAsDocument()));
     connect(printPage, SIGNAL(triggered()), this, SLOT(printCurrentDocument()));
-    //connect(encodingAction, SIGNAL(triggered()), this, SLOT(focusEncodingComboBox()));
     connect(closeTab, SIGNAL(triggered()), this, SLOT(closeDocument()));
     connect(exitApp, &QAction::triggered, this, &QMainWindow::close);
 
@@ -86,18 +88,35 @@ void MainWindow::createActions() {
     connect(displayLanguage, SIGNAL(triggered()), this, SLOT(selectLanguage()));
     connect(findText, SIGNAL(triggered()), this, SLOT(findTextDialog()));
 
+    connect(bugReport, SIGNAL(triggered()), this, SLOT(reportBugs()));
     connect(aboutQtAction, SIGNAL(triggered()), this, SLOT(aboutQt()));
     connect(aboutThisAppAction, SIGNAL(triggered()), this, SLOT(aboutThisApp()));
 
     seperator = new QAction;
     seperator->setSeparator(true);
+
+    // sets zoom mode
+    zoomPlus = new QAction(QIcon(":/ico/zoom+.jpg"), tr("Zoom in"));
+    zoomMinus = new QAction(QIcon(":/ico/zoom-.jpg"), tr("Zoom out"));
+
+    zoomPlus->setShortcut(QKeySequence::ZoomIn);
+    zoomMinus->setShortcut(QKeySequence::ZoomOut);
+
+    auto *zoomMenu = new QMenu;
+    zoomMenu->addAction(zoomPlus);
+    zoomMenu->addAction(zoomMinus);
+
+    zoom->setMenu(zoomMenu);
+
+    connect(zoomPlus,SIGNAL(triggered()),this,SLOT(zoomIn()));
+    connect(zoomMinus,SIGNAL(triggered()),this,SLOT(zoomOut()));
 }
 
 void MainWindow::setEncodings() {
     selectTextCode = new QComboBox(this);
-
     for (const QByteArray &i : QTextCodec::availableCodecs())
         selectTextCode->addItem(QString(i));
+    // qDebug()<<"Available encodings: "<<ans<<"\n";
 
     connect(selectTextCode, &QComboBox::currentTextChanged, this, &MainWindow::setTextEncoding);
 }
@@ -129,10 +148,6 @@ void MainWindow::createMenuBar() {
 
     file->addSeparator();
 
-    file->addAction(encodingAction);
-
-    file->addSeparator();
-
     file->addAction(printPage);
 
     file->addSeparator();
@@ -155,8 +170,17 @@ void MainWindow::createMenuBar() {
 
     edit->addAction(findText);
 
+    // 'view' menu
+    auto *view = new QMenu(tr("&View"));
+    view->addAction(zoom);
+
     // 'help' menu
     auto *help = new QMenu(tr("&Help"));
+
+    help->addAction(bugReport);
+
+    help->addSeparator();
+
     help->addAction(aboutQtAction);
     help->addAction(aboutThisAppAction);
 
@@ -164,6 +188,7 @@ void MainWindow::createMenuBar() {
     mainMenu = new QMenuBar;
     mainMenu->addMenu(file);
     mainMenu->addMenu(edit);
+    mainMenu->addMenu(view);
 
     mainMenu->addSeparator();
 
@@ -183,13 +208,13 @@ void MainWindow::createContextMenu() {
 
     this->addAction(seperator);
 
-    this->addAction(encodingAction);
-
-    this->addAction(seperator);
-
     this->addAction(addTime);
     this->addAction(addFileName);
     this->addAction(findText);
+
+    this->addAction(seperator);
+
+    this->addAction(zoom);
 
     this->setContextMenuPolicy(Qt::ContextMenuPolicy::ActionsContextMenu);
 }

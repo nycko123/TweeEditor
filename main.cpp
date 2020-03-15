@@ -5,6 +5,7 @@
 #include <QSettings>
 #include <QDebug>
 #include <QMessageBox>
+#include <QTranslator>
 
 int main(int argc, char *argv[]) {
     new QApplication(argc, argv);
@@ -19,10 +20,10 @@ int main(int argc, char *argv[]) {
 
     QTranslator translation;
     if (language == ZH_CN) {
-        res = translation.load(":/TweeSimpleEdit_zh_CN.qm");
+        res = translation.load(":translations/TweeSimpleEdit_zh_CN.qm");
         qDebug() << "Loading TweeSimpleEdit_zh_CN.qm" << "\n";
     } else if (language == PL_PL) {
-        res = translation.load(":/TweeSimpleEdit_pl_PL.qm");
+        res = translation.load(":translations/TweeSimpleEdit_pl_PL.qm");
         qDebug() << "Loading TweeSimpleEdit_pl_PL.qm" << "\n";
     }
 
@@ -34,9 +35,7 @@ int main(int argc, char *argv[]) {
 
     if (!res)
         // error occurred!
-        QMessageBox::critical(nullptr, QObject::tr("Error collecting data!"),
-                              QObject::tr("Loading translation failed!"), QMessageBox::Ok);
-
+        qDebug() << "Failed to load the translation!\n";
 
     auto *w = new MainWindow(nullptr, language);
 

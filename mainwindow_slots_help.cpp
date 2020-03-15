@@ -2,6 +2,15 @@
 
 #include "mainwindow.h"
 
+void MainWindow::reportBugs()
+{
+    bugReportDialog=new TweeBugReportDialog(this);
+
+    // reports the bug in 'Issue' HTML page
+    if(bugReportDialog->exec()==QDialog::Accepted)
+        QDesktopServices::openUrl(QUrl("https://github.com/TweeChalice/TweeEditor/issues"));
+}
+
 void MainWindow::aboutQt() {
     QMessageBox::aboutQt(this, tr("About Qt"));
 }

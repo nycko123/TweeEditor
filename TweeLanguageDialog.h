@@ -6,10 +6,10 @@
 #define PL_PL "Polski"         // polish
 
 #include <QDialog>
-#include <QTranslator>
 #include <QDialogButtonBox>
 
 class QComboBox;
+class QLabel;
 
 class TweeLanguageDialog : public QDialog
 {
