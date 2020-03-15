@@ -1,5 +1,5 @@
 
-![logo](https://cdn.jsdelivr.net/gh/Linhk1606/Linhk1606@V2.0.5/TweeEditor.svg)
+![logo](ico/TweeEditor-introduction-ico.png)
 
 ### A simple text editor powered by [Qt](https://www.qt.io)
 
