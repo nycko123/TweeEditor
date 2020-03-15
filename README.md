@@ -1,4 +1,3 @@
-[中文文档](https://github.com/TweeChalice/TweeEditor/blob/master/readme/README-CN.md)
 
 ![logo](https://cdn.jsdelivr.net/gh/Linhk1606/Linhk1606@V2.0.5/TweeEditor.svg)
 
@@ -21,7 +20,7 @@
  TweeChalice and Linhk are students and make this application together. This application is simple, so we hope that someone can give me some advise on changing better.
  
 
- If you have some problems to let us know, please write your problems in 'Issues'.
+ If you have some problems to let us know, please write your problems in `Issues`.
   
 ## Thanks
 
