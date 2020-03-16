@@ -1,4 +1,0 @@
-C:\Users\TweeChalice\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Project\C++\Qt\TweeEdit\Win32\TweeEdit
--- Configuring done
--- Generating done
--- Build files have been written to: D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug

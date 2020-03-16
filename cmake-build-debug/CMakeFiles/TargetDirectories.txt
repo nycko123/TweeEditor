@@ -1,4 +1,0 @@
-D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit.dir
-D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/Project/C++/Qt/TweeEdit/Win32/TweeEdit/cmake-build-debug/CMakeFiles/TweeEdit_autogen.dir
