@@ -56,7 +56,7 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="35"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Język</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="36"/>
@@ -66,12 +66,12 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="38"/>
         <source>Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiększenie</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="40"/>
         <source>Bug report</source>
-        <translation type="unfinished"></translation>
+        <translation>Zgłoszenie błędu</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="41"/>
@@ -89,27 +89,27 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="70"/>
         <source>Zooms the current document</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiększa bieżący dokument</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="72"/>
         <source>Report a bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Zgłoś błąd</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="99"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiększ</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="100"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmniejsz</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="174"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Widok</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="48"/>
@@ -124,25 +124,25 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="51"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="52"/>
         <source>Alt+F2</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+F2</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="73"/>
         <source>The information about Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacje o Qt</translation>
     </message>
     <message>
         <source>Alt+T</source>
-        <translation type="vanished">Alt+T</translation>
+        <translation>Alt+T</translation>
     </message>
     <message>
         <source>Alt+N</source>
-        <translation type="vanished">Alt+N</translation>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="55"/>
@@ -187,12 +187,12 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="64"/>
         <source>Sets the global text</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawia główny tekst</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="65"/>
         <source>Sets the displaying of the language</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawia wyświetlanie wyboru języka</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="66"/>
@@ -201,7 +201,7 @@
     </message>
     <message>
         <source>The information about Qt.</source>
-        <translation type="vanished">Informacja o Qt</translation>
+        <translation>Informacja o Qt</translation>
     </message>
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="129"/>
@@ -221,27 +221,27 @@
     <message>
         <location filename="../mainwindow_oncreate.cpp" line="178"/>
         <source>&amp;Help</source>
-        <translation>P&amp;omoc</translation>
+        <translation>&amp;Pomoc</translation>
     </message>
     <message>
         <location filename="../mainwindow_basic.cpp" line="55"/>
         <source>Error converting this document!</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd w przetwarzaniu tego dokumentu!</translation>
     </message>
     <message>
         <location filename="../mainwindow_basic.cpp" line="57"/>
         <source>Some chars that can&apos;t convert remaining in this document!</source>
-        <translation type="unfinished"></translation>
+        <translation>Istnieją znaki, których nie można było przetworzyć w tym dokumencie!</translation>
     </message>
     <message>
         <location filename="../mainwindow_basic.cpp" line="65"/>
         <source>Oops!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ups!</translation>
     </message>
     <message>
         <location filename="../mainwindow_basic.cpp" line="70"/>
         <source>Translating successfully, please save this document</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenie pomyślne, zapisz dokument</translation>
     </message>
     <message>
         <location filename="../mainwindow_basic.cpp" line="63"/>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../mainwindow_slots_file.cpp" line="39"/>
         <source>Select a documnet</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz dokument</translation>
     </message>
     <message>
         <location filename="../mainwindow_slots_file.cpp" line="48"/>
@@ -286,7 +286,7 @@
     <message>
         <location filename="../mainwindow_slots_file.cpp" line="49"/>
         <source>Can&apos;t open this file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można otworzyć tego dokumentu</translation>
     </message>
     <message>
         <location filename="../mainwindow_slots_file.cpp" line="89"/>
@@ -340,22 +340,22 @@ Chcesz je zapisać?</translation>
         <location filename="../mainwindow_events.cpp" line="15"/>
         <source>There&apos;re &lt;b&gt;some files unsaved&lt;/b&gt;.
 Are you sure you want to exit?</source>
-        <translation type="unfinished"></translation>
+        <translation>Istnieją niezapisane dokumenty. Czy na pewno wyjść z programu?</translation>
     </message>
     <message>
         <location filename="../mainwindow_slots_edit.cpp" line="18"/>
         <source>Select the font</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz czcionkę</translation>
     </message>
     <message>
         <location filename="../mainwindow_slots_edit.cpp" line="50"/>
         <source>Attention</source>
-        <translation type="unfinished"></translation>
+        <translation>Uwaga</translation>
     </message>
     <message>
         <location filename="../mainwindow_slots_edit.cpp" line="51"/>
         <source>Your language will be changed after restarting TweeEditor</source>
-        <translation type="unfinished"></translation>
+        <translation>Język zostanie zmieniony po ponownym uruchomieniu TweeEditor</translation>
     </message>
 </context>
 <context>
@@ -370,32 +370,32 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="10"/>
         <source>Your system name: </source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa systemu: </translation>
     </message>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="15"/>
         <source>Your system product name: </source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa kodowa systemu: </translation>
     </message>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="21"/>
         <source>Your version of the system product: </source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja systemu: </translation>
     </message>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="25"/>
         <source>Your CPU Architecture: </source>
-        <translation type="unfinished"></translation>
+        <translation>Architektura procesora: </translation>
     </message>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="35"/>
         <source>Copy this information</source>
-        <translation type="unfinished"></translation>
+        <translation>Skopiuj te informacje</translation>
     </message>
     <message>
         <location filename="../TweeBugReportDialog.cpp" line="84"/>
         <source>Bug report</source>
-        <translation type="unfinished"></translation>
+        <translation>Zgłoś błąd</translation>
     </message>
 </context>
 <context>
@@ -409,7 +409,7 @@ Are you sure you want to exit?</source>
         <location filename="../FindDialog.cpp" line="10"/>
         <location filename="../FindDialog.cpp" line="75"/>
         <source>Find</source>
-        <translation>Znajdź</translation>
+        <translation>Szukaj</translation>
     </message>
     <message>
         <location filename="../FindDialog.cpp" line="15"/>
@@ -429,7 +429,7 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../FindDialog.cpp" line="19"/>
         <source>&amp;Regular expression finding</source>
-        <translation type="unfinished"></translation>
+        <translation>Szukanie za pomocą wyrażeń regularnych</translation>
     </message>
     <message>
         <location filename="../FindDialog.cpp" line="20"/>
@@ -444,7 +444,7 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../FindDialog.cpp" line="24"/>
         <source>Find options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcje wyszukiwania</translation>
     </message>
     <message>
         <location filename="../FindDialog.cpp" line="32"/>
@@ -454,13 +454,13 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../FindDialog.cpp" line="38"/>
         <source>Special finding option</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczegółowe opcje wyszukiwania</translation>
     </message>
     <message>
         <location filename="../FindDialog.cpp" line="48"/>
         <location filename="../FindDialog.cpp" line="121"/>
         <source>Find the word</source>
-        <translation>Szukaj słowa</translation>
+        <translation>Wpisz szukane słowa</translation>
     </message>
     <message>
         <location filename="../FindDialog.cpp" line="92"/>
@@ -475,7 +475,7 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../FindDialog.cpp" line="119"/>
         <source>Find the regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Wpisz wyrażenie regularne</translation>
     </message>
 </context>
 <context>
@@ -521,17 +521,17 @@ Are you sure you want to exit?</source>
     <message>
         <location filename="../TweeLanguageDialog.cpp" line="6"/>
         <source>Select the language displayed</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz wyświetlany język</translation>
     </message>
     <message>
         <location filename="../TweeLanguageDialog.cpp" line="14"/>
         <source>No translation found? &lt;a href=&quot;https://github.com/TweeChalice/TweeEditor/issues&quot;&gt;Add translation or report&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie znaleziono języka? &lt;a href=&quot;https://github.com/TweeChalice/TweeEditor/issues&quot;&gt;Dodaj lub zgłoś&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../TweeLanguageDialog.cpp" line="39"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Język</translation>
     </message>
 </context>
 </TS>
