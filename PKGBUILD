@@ -15,7 +15,7 @@ source=("git+https://github.com/nycko123/TweeEditor.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd "${_gitname}"
+  cd "${_realname}"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
